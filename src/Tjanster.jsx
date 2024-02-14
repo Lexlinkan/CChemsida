@@ -2,10 +2,26 @@ import React from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import logoHome from "./assets/CCS_COLOR.png";
 import varaTjanser from "./assets/vara-tjanster.jpeg";
+import { Link } from "react-router-dom";
+import Kontakt from "./Kontakt";
 
 const Tjanster = () => {
   return (
     <div style={body}>
+      <div style={nav}>
+        <Link to="/tjanster" element={<Tjanster />}>
+          <span style={navItem}>VÅRA TJÄNSTER</span>
+        </Link>
+        <span style={navItem}>MARKSERVICE</span>
+        <span style={navItem}>REFERENSER</span>
+        <span style={navItem}>KVALITET & MILJÖ</span>
+        <span style={navItem}>BEGÄR OFFERT</span>
+        <span style={navItem}>LEDIGA JOBB</span>
+        <span style={navItem}>OM OSS</span>
+        <Link to="/kontakt" element={<Kontakt />}>
+            <span style={navItem}>KONTAKT</span>
+          </Link>
+      </div>
       <div style={topContainer}>
         <span style={title}>Våra Tjänster</span>
         <img style={logo} src={logoHome} alt="Logga" />
@@ -42,12 +58,14 @@ const Tjanster = () => {
             erbjuda kundanpassade lösningar med bästa möjliga service.
             Miljöanpassad lokalvård är en självklarhet för oss och vi använder
             alltid bara miljömedvetna och miljömärkta metoder och kemikalier.
-            Våra resurser och priser gör oss konkurrenskraftiga på marknaden,
-            men vi vill såklart att våra kunder ska känns sig trygga med oss som
-            samarbetspartner. Långsiktiga relationer skapas genom förtroende.
-            För att kunna känna på samarbetet och hitta ett fungerande
-            tillvägagångssätt innan man tecknar några löpande avtal, erbjuder vi
-            även engångstjänster.
+            <p>
+              Våra resurser och priser gör oss konkurrenskraftiga på marknaden,
+              men vi vill såklart att våra kunder ska känns sig trygga med oss
+              som samarbetspartner. Långsiktiga relationer skapas genom
+              förtroende. För att kunna känna på samarbetet och hitta ett
+              fungerande tillvägagångssätt innan man tecknar några löpande
+              avtal, erbjuder vi även engångstjänster.
+            </p>
           </span>
         </div>
         <div style={card}>
@@ -67,7 +85,13 @@ const Tjanster = () => {
             kollar vi på en möjlig lösning!
           </span>
         </div>
+        <div>
+
+        </div>
       </div>
+      <Link to="/kontakt" element={<Kontakt />}>
+        <button style={button}>Kontakta Oss</button>
+      </Link>
     </div>
   );
 };
@@ -81,7 +105,7 @@ const body = {
 const topContainer = {
   display: "flex",
   justifyContent: "space-around",
-  alignItems: "canter",
+  alignItems: 'center',
   padding: 20,
   width: "100%",
   marginBottom: 20,
@@ -94,8 +118,8 @@ const topRight = {
 };
 
 const logo = {
-  width: 150,
-  height: 150,
+  width: 120,
+  height: 120,
   marginTop: 25,
 };
 
@@ -106,6 +130,7 @@ const title = {
   color: "#002554",
   fontSize: 57,
   fontWeight: 500,
+  marginTop: 40,
 };
 
 const subtitle = {
@@ -122,7 +147,6 @@ const spanContainer = {
   alignItems: "center",
   padding: 20,
   width: "50%",
-  marginBottom: 50,
 };
 
 const cardContainer = {
@@ -130,10 +154,8 @@ const cardContainer = {
   justifyContent: "space-around",
   alignItems: "center",
   flexDirection: "row",
-  padding: 20,
-  paddintBottom: 0,
   width: "75%",
-  marginBottom: 20,
+  gap: 20,
 };
 
 const card = {
@@ -141,7 +163,11 @@ const card = {
   flexDirection: "row",
   alignItems: "start",
   width: "50%",
-  marginBottom: 200,
+  marginBottom: 10,
+  border: "1px solid #002554",
+  borderRadius: 5,
+  height: 300,
+  padding: 20,
 };
 
 const cardTitle = {
@@ -156,7 +182,41 @@ const cardSubtitle = {
   fontFamily: "dosis, sans-serif",
   color: "#999a9a",
   margin: 15,
-  letterSpacing: 1,
+  letterSpacing: 2,
 };
+
+const nav = {
+  display: "flex",
+  justifyContent: "space-around",
+  alignItems: "center",
+  flexDirection: "row",
+  padding: 20,
+  fontFamily: "dosis, sans-serif",
+  color: "#002554",
+  fontSize: 20,
+  fontWeight: 500,
+  backgroundColor: "#f2f2f2",
+  width: "100%",
+};
+
+const navItem = {
+  transition: "transform 0.2s ease-in-out",
+  cursor: "pointer",
+};
+
+const button = {
+    backgroundColor: "#002554",
+    color: "white",
+    width: 200,
+    padding: 10,
+    borderRadius: 5,
+    border: "none",
+    cursor: "pointer",
+    fontSize: 20,
+    fontFamily: "dosis, sans-serif",
+    marginTop: 50,
+    marginBottom: 50,
+    transition: "transform 0.2s ease-in-out",
+    };
 
 export default Tjanster;

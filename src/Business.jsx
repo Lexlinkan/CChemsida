@@ -7,6 +7,7 @@ import kvalitetMiljo from "./assets/miljö_&_hållbarhet.jpeg";
 import offertImg from "./assets/offertImg.jpeg";
 import { Link } from "react-router-dom";
 import Tjanster from "./Tjanster";
+import Kontakt from "./Kontakt";
 
 const Business = () => {
   return (
@@ -22,7 +23,9 @@ const Business = () => {
           <span style={navItem}>BEGÄR OFFERT</span>
           <span style={navItem}>LEDIGA JOBB</span>
           <span style={navItem}>OM OSS</span>
-          <span style={navItem}>KONTAKT</span>
+          <Link to="/kontakt" element={<Kontakt />}>
+            <span style={navItem}>KONTAKT</span>
+          </Link>
         </div>
         <div style={topContainer}>
           <img style={logo} src={logoHome} alt="" />
@@ -110,8 +113,8 @@ const topRight = {
 };
 
 const logo = {
-  width: 150,
-  height: 150,
+  width: 120,
+  height: 120,
   marginTop: 25,
 };
 
@@ -123,6 +126,7 @@ const title = {
   color: "#002554",
   fontSize: 57,
   fontWeight: 500,
+  marginTop: 40,
 };
 
 const subtitle = {
