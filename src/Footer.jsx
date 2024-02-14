@@ -22,8 +22,10 @@ const style = {
   display: "flex",
   alignItems: "center",
   justifyContent: "space-around",
-  height: 150,
+  height: 50,
   borderTop: "1px solid #ddd",
+  backgroundColor: "#f2f2f2",
+  marginTop: 50,
 };
 
 const span = {

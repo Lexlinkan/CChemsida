@@ -5,13 +5,17 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import kundIFokus from "./assets/kund_i_fokus.jpeg";
 import kvalitetMiljo from "./assets/miljö_&_hållbarhet.jpeg";
 import offertImg from "./assets/offertImg.jpeg";
+import { Link } from "react-router-dom";
+import Tjanster from "./Tjanster";
 
 const Business = () => {
   return (
     <div>
       <div style={body}>
         <div style={nav}>
-          <span style={navItem}>VÅRA TJÄNSTER</span>
+          <Link to="/tjanster" element={<Tjanster />}>
+            <span style={navItem}>VÅRA TJÄNSTER</span>
+          </Link>
           <span style={navItem}>MARKSERVICE</span>
           <span style={navItem}>REFERENSER</span>
           <span style={navItem}>KVALITET & MILJÖ</span>
@@ -36,33 +40,56 @@ const Business = () => {
         <div style={cardContainer}>
           <div style={card}>
             <span style={cardTitle}>Kunden i fokus</span>
-            <p style={cardSubtitle}>Hög tillgänglighet och flexibilitet är viktiga faktorer i vårt dagliga arbete. Även med mycket kort varsel kan vi snabbt vara på plats. Men det handlar också om snabb återkoppling vid eventuell reklamation.</p>
+            <p style={cardSubtitle}>
+              Hög tillgänglighet och flexibilitet är viktiga faktorer i vårt
+              dagliga arbete. Även med mycket kort varsel kan vi snabbt vara på
+              plats. Men det handlar också om snabb återkoppling vid eventuell
+              reklamation.
+            </p>
           </div>
           <div style={card}>
             <span style={cardTitle}>Kvalitet och miljö</span>
-            <p style={cardSubtitle}>Vår affärsidé är att utföra miljöanpassad lokalvård och andra servicetjänster med hög kvalitet och professionellt kundbemötande. 
-            Ett miljömedvetet tänk är ständigt närvarande i vårt dagliga arbete. Vi är miljöcertifierade enligt ISO 9001:2015 och 14001:2015, vilket vi är väldigt stolta över. Miljön är vår framtid.</p>
+            <p style={cardSubtitle}>
+              Vår affärsidé är att utföra miljöanpassad lokalvård och andra
+              servicetjänster med hög kvalitet och professionellt kundbemötande.
+              Ett miljömedvetet tänk är ständigt närvarande i vårt dagliga
+              arbete. Vi är miljöcertifierade enligt ISO 9001:2015 och
+              14001:2015, vilket vi är väldigt stolta över. Miljön är vår
+              framtid.
+            </p>
           </div>
           <div style={card}>
             <span style={cardTitle}>Service som lever upp till dina krav</span>
-            <p style={cardSubtitle}>Våra kompetenta och engagerade medarbetare är de som bidrar till företagets utveckling. Det innebär att vi kan garantera en hög kvalitet och servicegrad. Men för att du ska bli övertygad så kan du givetvis testa oss innan du bestämmer dig!</p>
+            <p style={cardSubtitle}>
+              Våra kompetenta och engagerade medarbetare är de som bidrar till
+              företagets utveckling. Det innebär att vi kan garantera en hög
+              kvalitet och servicegrad. Men för att du ska bli övertygad så kan
+              du givetvis testa oss innan du bestämmer dig!
+            </p>
           </div>
         </div>
-          <div style={imageContainer}>
-            <img style={{width: 300, height: 300}} src={kundIFokus} alt="Kund i Fokus" />
-            <img style={{width: 300, height: 300}} src={kvalitetMiljo} alt="" />
-            <img style={{width: 250, height: 300}} src={offertImg} alt="" />
-          </div>
+        <div style={imageContainer}>
+          <img
+            style={{ width: 350, height: 300 }}
+            src={kundIFokus}
+            alt="Kund i Fokus"
+          />
+          <img style={{ width: 350, height: 300 }} src={kvalitetMiljo} alt="" />
+          <img style={{ width: 350, height: 300 }} src={offertImg} alt="" />
+        </div>
       </div>
     </div>
   );
 };
+
+export default Business;
 
 const body = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   flexDirection: "column",
+  height: "vh",
 };
 
 const topContainer = {
@@ -83,7 +110,7 @@ const topRight = {
 };
 
 const logo = {
-  with: 300,
+  width: 150,
   height: 150,
   marginTop: 25,
 };
@@ -130,6 +157,7 @@ const cardContainer = {
   alignItems: "center",
   flexDirection: "row",
   padding: 20,
+  paddintBottom: 0,
   width: "75%",
 };
 
@@ -137,10 +165,7 @@ const card = {
   display: "flex",
   flexDirection: "column",
   alignItems: "start",
-  padding: 20,
-  width: 250,
-  height: 300,
-
+  width: 350,
 };
 
 const cardTitle = {
@@ -163,8 +188,6 @@ const imageContainer = {
   justifyContent: "space-around",
   alignItems: "center",
   flexDirection: "row",
-  padding: 20,
   width: "75%",
+  marginBottom: 70,
 };
-
-export default Business;
