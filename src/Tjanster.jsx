@@ -8,6 +8,7 @@ import Markservice from "./Markservice";
 import Referenser from "./Referenser";
 import KvalitetMiljo from "./KvalitetMiljo";
 import LedigaJobb from "./LedigaJobb";
+import About from "./About";
 
 const Tjanster = () => {
   return (
@@ -40,7 +41,9 @@ const Tjanster = () => {
         <Link to="/ledigajobb" element={<LedigaJobb />}>
           <span style={navItem}>LEDIGA JOBB</span>
         </Link>
-        <span style={navItem}>OM OSS</span>
+        <Link to="/omoss" element={<About />}>
+          <span style={navItem}>OM OSS</span>
+        </Link>
         <Link to="/kontakt" element={<Kontakt />}>
           <span style={navItem}>KONTAKT</span>
         </Link>
@@ -191,7 +194,7 @@ const cardSubtitle = {
   fontSize: 15,
   fontFamily: "merriweather, sans-serif",
   color: "#999a9a",
-  letterSpacing: 1,
+  letterSpacing: 2,
 };
 
 const nav = {

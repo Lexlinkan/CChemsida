@@ -9,6 +9,7 @@ import Referenser from "./Referenser";
 import Markservice from "./Markservice";
 import KvalitetMiljo from "./KvalitetMiljo";
 import LedigaJobb from "./LedigaJobb";
+import About from "./About";
 
 const Kontakt = () => {
   return (
@@ -39,9 +40,11 @@ const Kontakt = () => {
         </Link>
         <span style={navItem}>BEGÄR OFFERT</span>
         <Link to="/ledigajobb" element={<LedigaJobb />}>
-            <span style={navItem}>LEDIGA JOBB</span>
-          </Link>
-        <span style={navItem}>OM OSS</span>
+          <span style={navItem}>LEDIGA JOBB</span>
+        </Link>
+        <Link to="/omoss" element={<About />}>
+          <span style={navItem}>OM OSS</span>
+        </Link>
         <Link to="/kontakt" element={<Kontakt />}>
           <span style={navItem}>KONTAKT</span>
         </Link>

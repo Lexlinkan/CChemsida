@@ -10,6 +10,7 @@ import Markservice from './Markservice';
 import Referenser from './Referenser';
 import KvalitetMiljo from './KvalitetMiljo';
 import LedigaJobb from './LedigaJobb';
+import About from './About';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/referenser" element={<Referenser />} />
         <Route path="/kvalitetmiljo" element={<KvalitetMiljo />} />
         <Route path="/ledigajobb" element={<LedigaJobb />} />
+        <Route path="/omoss" element={<About />} />
       </Routes>
       <Footer />
     </Router>

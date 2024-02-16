@@ -190,7 +190,7 @@ const cardSubtitle = {
   fontFamily: "Merriweather, serif",
   color: "#999a9a",
   margin: 15,
-  letterSpacing: 1,
+  letterSpacing: 2,
 };
 
 const imageContainer = {

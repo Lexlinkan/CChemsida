@@ -8,9 +8,11 @@ import Markservice from "./Markservice";
 import Referenser from "./Referenser";
 import KvalitetMiljo from "./KvalitetMiljo";
 import Tjanster from "./Tjanster";
-import About from "./About";
+import LedigaJobb from "./LedigaJobb";
 
-const LedigaJobb = () => {
+import omOss from "./assets/omOss.jpeg";
+
+const About = () => {
   return (
     <div style={body}>
       <div style={topContainer}>
@@ -48,74 +50,101 @@ const LedigaJobb = () => {
           <span style={navItem}>KONTAKT</span>
         </Link>
       </div>
-      <img
-        src={ledigaJobbImg}
-        style={{ width: "75%" }}
-        alt="Våra Tjänster image"
-      />
+      <img src={omOss} style={{ width: "75%" }} alt="Våra Tjänster image" />
       <div style={spanContainer}>
-        <span style={title}>
-          Vill du jobba på CC Service? Vi har nu två lediga tjänster - en driven
-          säljare och en ambitiös supervisor!
-        </span>
+        <span style={title}>Ett städbolag att lita på</span>
         <span style={subtitle}>
-          Är du en duktig, målmedveten och tävlingsinriktad säljare som vill
-          arbeta med försäljning av våra tjänster och mötesbokning med
-          intressanta kundprospekt? Hos oss får du jobba med ett expansivt
-          städbolag med gott renommé. <p></p> Eller är du en stresstålig,
-          ambitiös och noggrann supervisor som vill arbeta ute hos en av våra
-          kunder?{" "}
-          <p style={cardSubtitle}>
-            Vi erbjuder dig en nyckelroll i bolaget och tillsammans med VD:n
-            jobbar ni för en framtida utveckling och tillväxt genom att bryta ny
-            mark och utöka kundstocken. Du får en roll med stor frihet och
-            möjlighet att själv påverka dina resultat och din inkomst. Du utgår
-            från vårt kontor i Täby alternativt från ett hemmakontor.
-          </p>
+          CC Service är ett mindre städbolag med det stora företagets kompetens
+          och erfarenhet. Vi erbjuder olika städtjänster hos privata företag
+          samt hushållsnära tjänster till privatpersoner. Vi är certifierade
+          enligt ISO 9001:2015 och ISO 14001:2015. CC Service strävar efter att
+          vara en attraktiv arbetsgivare och ett företag med god etik.
         </span>
-      </div>
-      <div style={cardContainer}>
-        <span style={cardTitle}>ARBETSUPPGIFTER</span>
       </div>
       <div style={cardContainer}>
         <div style={card}>
-          <span style={cardSubtitle}>
-            Som säljare hos oss har du huvudansvar för prospektering, kontakt,
-            mötesbokning och ibland även besök hos nya kunder. Du kommer att få
-            göra kalkyleringar samt hjälpa till med offert- och avtalsskrivning.
-            Som stöd i ditt arbete har du en referensbank med många nöjda kunder
-            och en VD som har en stor branschkunskap att dela med sig av.{" "}
-            <p> </p>
-            <span style={cardTitle}>KRAVPROFIL</span>
-            <p>
-              Vi söker dig som är en driven säljare med förmåga att själv
-              planera ditt arbete och skapa affärer. I rollen ska du själv bygga
-              upp en kundstock och tillbringa mycket tid med att prospektera och
-              ta kontakt med beslutsfattare på företag i Stockholmsområdet. <p></p> Du
-              måste därför triggas av kontakten med människor och att leta nya
-              affärsmöjligheter. Vi vill att du har erfarenhet av uppsökande
-              försäljning och kan visa på framgång i tidigare säljroller eller
-              som innesäljare/mötesbokare.
+          <span style={cardTitle}>
+            OM OSS
+            <p style={cardSubtitle}>
+              CC Service startades 2014 men har en gedigen och lång erfarenhet.
+              Våra kunder finns i Storstockholm inom såväl den privata som den
+              offentliga sektorn. Vi strävar efter att erbjuda hushållsnära
+              tjänster med hög kvalitet.
+            </p>
+            <p style={cardSubtitle}>
+              Vår affärsidé är att utföra miljöanpassad lokalvård och andra
+              servicetjänster med kvalitet och bra kundservice. Vår
+              konkurrenskraft fokuseras på vårt kunnande, vårt engagemang, våra
+              resurser och våra priser.
+            </p>
+            <p style={cardSubtitle}>
+              Framförallt arbetar vi för att skapa en ökad kundnöjdhet, men även
+              för att hitta en hållbar utveckling för företaget. Vi vill ha
+              motiverade medarbetare som trivs med att jobba hos oss.
             </p>
           </span>
         </div>
         <div style={card}>
           <span style={cardSubtitle}>
-            Ditt främsta verktyg blir telefonen men du ska även kunna driva och
-            delta i egna kundmöten vid behov. Som person har du stor social
-            kompetens, hög energinivå och en ambition att bidra med öppningar
-            till nya affärsmöjligheter. <p></p>
-            <span style={cardTitle}>ANSÖKAN</span>
-            <p>
-              Vill du bidra till vår fortsatta expansion och samtidigt få ett
-              spännande och utmanande arbete i ett bolag med höga krav på
-              kvalitet och kundnöjdhet?
-            </p>
-            <p>
-              Ansök genom att maila din ansökan i form av ett personligt brev
-              och CV till info@ccservice.se, märk ansökan med referensnummer
-              6484. Intervjuer och urval sker löpande så ansök snarast möjligt.
-            </p>
+            <span style={cardTitle}>VÅRA POLICYS I SAMMANDRAG</span>
+            <ul>
+              <li>
+                <p style={policyTitle}>
+                  KVALITETSPOLICY
+                  {
+                    "- att uppfylla kunders krav/behov i rätt tid, på rätt sätt och med hög och jämn kvalitet."
+                  }
+                </p>
+              </li>
+              <li>
+                <p style={policyTitle}>
+                  MILJÖPOLICY
+                  {
+                    "- minska miljöpåverkan genom mindre förorening, avfall och användning av naturresurser."
+                  }
+                </p>
+              </li>
+              <li>
+                <p style={policyTitle}>
+                  PERSONALPOLICY
+                  {
+                    "- skapa kompetenta/engagerade medarbetare, som kan bidra till företagets utveckling. "
+                  }
+                </p>
+              </li>
+              <li>
+                <p style={policyTitle}>
+                  ARBETSMILJÖPOLICY
+                  {
+                    "– skall leda till ett gott arbetsklimat, bra hälsa, låg sjukfrånvaro och få arbetsskador."
+                  }
+                </p>
+              </li>
+              <li>
+                <p style={policyTitle}>
+                  JÄMSTÄLLDHETSPOLICY
+                  {
+                    "– ett målinriktat jämställdhetsarbete med lika möjlighet till anställning och befordran."
+                  }
+                </p>
+              </li>
+              <li>
+                <p style={policyTitle}>
+                  DROGPOLICY
+                  {
+                    "– alkohol/droger ska inte användas. Vi förebygger och motverkar missbruksproblem."
+                  }
+                </p>
+              </li>
+              <li>
+                <p style={policyTitle}>
+                  ETIKPOLICY
+                  {
+                    "– vi ska präglas av god etik, bry oss om vår omvärld, respektera mänskliga rättigheter och stå för löften. KRÄNKANDE SÄRBEHANDLING OCH SEXUELLA TRAKASSERIER – kränkande särbehandling, mobbning eller sexuella trakasserier tolereras ej på våra arbetsplatser."
+                  }
+                </p>
+              </li>
+            </ul>
           </span>
         </div>
       </div>
@@ -193,7 +222,7 @@ const card = {
   display: "flex",
   flexDirection: "row",
   width: "50%",
-  marginBottom: 10,
+  marginBottom: 250,
   height: 300,
 };
 
@@ -201,7 +230,12 @@ const cardTitle = {
   fontSize: 25,
   fontFamily: "dosis, sans-serif",
   color: "#002554",
-  marginBottom: 20,
+};
+
+const policyTitle = {
+  fontSize: 15,
+  fontFamily: "merriweather, sans-serif",
+  marginBottom: 10,
 };
 
 const cardSubtitle = {
@@ -244,4 +278,4 @@ const button = {
   transition: "transform 0.2s ease-in-out",
 };
 
-export default LedigaJobb;
+export default About;
