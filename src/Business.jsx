@@ -8,25 +8,15 @@ import offertImg from "./assets/offertImg.jpeg";
 import { Link } from "react-router-dom";
 import Tjanster from "./Tjanster";
 import Kontakt from "./Kontakt";
+import Markservice from "./Markservice";
+import KvalitetMiljo from "./KvalitetMiljo";
+import Referenser from "./Referenser";
+import LedigaJobb from "./LedigaJobb";
 
 const Business = () => {
   return (
     <div>
       <div style={body}>
-        <div style={nav}>
-          <Link to="/tjanster" element={<Tjanster />}>
-            <span style={navItem}>VÅRA TJÄNSTER</span>
-          </Link>
-          <span style={navItem}>MARKSERVICE</span>
-          <span style={navItem}>REFERENSER</span>
-          <span style={navItem}>KVALITET & MILJÖ</span>
-          <span style={navItem}>BEGÄR OFFERT</span>
-          <span style={navItem}>LEDIGA JOBB</span>
-          <span style={navItem}>OM OSS</span>
-          <Link to="/kontakt" element={<Kontakt />}>
-            <span style={navItem}>KONTAKT</span>
-          </Link>
-        </div>
         <div style={topContainer}>
           <img style={logo} src={logoHome} alt="" />
           <div style={topRight}>
@@ -37,9 +27,29 @@ const Business = () => {
             </span>
           </div>
         </div>
-        <div>
-          <img src={business} alt="Business image" />
+        <div style={nav}>
+          <Link to="/tjanster" element={<Tjanster />}>
+            <span style={navItem}>VÅRA TJÄNSTER</span>
+          </Link>
+          <Link to="/markservice" element={<Markservice />}>
+            <span style={navItem}>MARKSERVICE</span>
+          </Link>
+          <Link to="/referenser" element={<Referenser />}>
+            <span style={navItem}>REFERENSER</span>
+          </Link>
+          <Link to="/kvalitetmiljo" element={<KvalitetMiljo />}>
+            <span style={navItem}>KVALITET & MILJÖ</span>
+          </Link>
+          <span style={navItem}>BEGÄR OFFERT</span>
+          <Link to="/ledigajobb" element={<LedigaJobb />}>
+            <span style={navItem}>LEDIGA JOBB</span>
+          </Link>
+          <span style={navItem}>OM OSS</span>
+          <Link to="/kontakt" element={<Kontakt />}>
+            <span style={navItem}>KONTAKT</span>
+          </Link>
         </div>
+        <img src={business} style={{ width: "75%" }} alt="Business image" />
         <div style={cardContainer}>
           <div style={card}>
             <span style={cardTitle}>Kunden i fokus</span>
@@ -97,13 +107,11 @@ const body = {
 
 const topContainer = {
   display: "flex",
-  justifyContent: "space-around",
+  justifyContent: "space-between",
   alignItems: "center",
   padding: 20,
-  width: "100%",
+  width: "75%",
   marginBottom: 20,
-  marginLeft: 180,
-  marginRight: 180,
 };
 
 const topRight = {
@@ -113,8 +121,8 @@ const topRight = {
 };
 
 const logo = {
-  width: 120,
-  height: 120,
+  width: 114,
+  height: 141,
   marginTop: 25,
 };
 
@@ -146,8 +154,7 @@ const nav = {
   color: "#002554",
   fontSize: 20,
   fontWeight: 500,
-  backgroundColor: "#f2f2f2",
-  width: "100%",
+  width: "79%",
 };
 
 const navItem = {
@@ -158,7 +165,6 @@ const navItem = {
 const cardContainer = {
   display: "flex",
   justifyContent: "space-around",
-  alignItems: "center",
   flexDirection: "row",
   padding: 20,
   paddintBottom: 0,
@@ -181,7 +187,7 @@ const cardTitle = {
 
 const cardSubtitle = {
   fontSize: 15,
-  fontFamily: "dosis, sans-serif",
+  fontFamily: "Merriweather, serif",
   color: "#999a9a",
   margin: 15,
   letterSpacing: 1,

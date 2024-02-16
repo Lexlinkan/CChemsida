@@ -15,7 +15,6 @@ export const Footer = () => {
 };
 
 const style = {
-  position: "fixed",
   bottom: 0,
   left: 0,
   width: "100%",
@@ -23,8 +22,6 @@ const style = {
   alignItems: "center",
   justifyContent: "space-around",
   height: 50,
-  borderTop: "1px solid #ddd",
-  backgroundColor: "#f2f2f2",
   marginTop: 50,
 };
 

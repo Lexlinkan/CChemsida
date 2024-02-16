@@ -1,19 +1,31 @@
 import React from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import logoHome from "./assets/CCS_COLOR.png";
-import varaTjanser from "./assets/vara-tjanster.jpeg";
+import kundIFokus from "./assets/kund_i_fokus.jpeg";
 import { Link } from "react-router-dom";
 import Kontakt from "./Kontakt";
 import Markservice from "./Markservice";
-import Referenser from "./Referenser";
+import Tjanster from "./Tjanster";
 import KvalitetMiljo from "./KvalitetMiljo";
 import LedigaJobb from "./LedigaJobb";
 
-const Tjanster = () => {
+// Bilder till kungloggotyper
+import abbot from "./assets/abbot.jpg";
+import abbvie from "./assets/abbvie.jpg";
+import claraLogo from "./assets/clara-logo.jpg";
+import clavister from "./assets/clavister.jpg";
+import hotellSkeppsholmen from "./assets/hotell_skeppsholmen_logo-390x238.jpg";
+import logo20170227182418 from "./assets/logo-20170227182418.png";
+import nobisLogotypjpg2jpeg from "./assets/nobis_logotypjpg2jpeg.jpg";
+import stallmastaregardenLogo from "./assets/stallmastaregarden_logo.gif";
+import einarMattson from "./assets/print-logo.jpg";
+import j from "./assets/200_logo_1330680504.jpg";
+
+const Referenser = () => {
   return (
     <div style={body}>
       <div style={topContainer}>
-        {/* <span style={title}>Våra Tjänster</span> */}
+        {/* <span style={title}>Referenser</span> */}
         <img style={logo} src={logoHome} alt="Logga" />
         <div style={topRight}>
           <span style={title}>Företag</span>
@@ -46,59 +58,58 @@ const Tjanster = () => {
         </Link>
       </div>
       <img
-        src={varaTjanser}
+        src={kundIFokus}
         style={{ width: "75%" }}
         alt="Våra Tjänster image"
       />
       <div style={spanContainer}>
-        <span style={title}>Service som lever upp till dina krav</span>
+        <span style={title}>Kunden i fokus</span>
         <span style={subtitle}>
-          Våra kompetenta och engagerade medarbetare är de som bidrar till
-          företagets utveckling. Det innebär att vi kan garantera en hög
-          kvalitet och servicegrad. Men för att du ska bli övertygad så kan du
-          givetvis testa oss innan du bestämmer dig!
+          Hög tillgänglighet och flexibilitet är viktiga faktorer i vårt dagliga
+          arbete. Även med mycket kort varsel kan vi snabbt vara på plats. Men
+          det handlar också om snabb återkoppling vid eventuell reklamation.
         </span>
       </div>
       <div style={cardContainer}>
-        <span style={cardTitle}>VÅRA FÖRETAGSTJÄNSTER</span>
+        <span style={cardTitle}>ARBETSSÄTT OCH VÄRDERINGAR</span>
       </div>
       <div style={cardContainer}>
         <div style={card}>
           <span style={cardSubtitle}>
-            CC Service är ett lokalvårdsföretag med ett brett utbud av olika
-            tjänster. Vi städar både kontor, hotell, trappor, skolor, etc. För
-            oss är det alltid viktigt att upprätthålla en hög kvalitet och en
-            bra kundservice. Vår erfarenhet och vårt engagemang gör att vi kan
-            erbjuda kundanpassade lösningar med bästa möjliga service.
-            Miljöanpassad lokalvård är en självklarhet för oss och vi använder
-            alltid bara miljömedvetna och miljömärkta metoder och kemikalier.
-            <p>
-              Våra resurser och priser gör oss konkurrenskraftiga på marknaden,
-              men vi vill såklart att våra kunder ska känns sig trygga med oss
-              som samarbetspartner. Långsiktiga relationer skapas genom
-              förtroende. För att kunna känna på samarbetet och hitta ett
-              fungerande tillvägagångssätt innan man tecknar några löpande
-              avtal, erbjuder vi även engångstjänster.
-            </p>
+            Vi vill att våra kunder ska kunna lita på oss. Vår höga
+            leveranssäkerhet och kvalitetssäkring har gjort att vi byggt upp ett
+            bra nät av kundreferenser. Vi arbetar med ständiga förbättringar
+            vilket bland annat innebär att ställa krav på våra leverantörer, men
+            även att skapa en god arbetsmiljö för våra medarbetare. Detta ska
+            vara en avgörande orsak till varför kunderna väljer oss.
           </span>
         </div>
         <div style={card}>
           <span style={cardSubtitle}>
-            Förutom våra ordinarie tjänster erbjuder vi även olika typer av
-            specialstädning så som:
-            <ul>
-              <li>golvvård</li>
-              <li>storstädning</li>
-              <li>fönsterputs</li>
-              <li>rangörning av entrémattor</li>
-              <li>flyttstädning</li>
-              <li>mattvätt och uthyrning</li>
-              <li>m.m</li>
-            </ul>
-            Oavsett vad ni har behov av så är ni välkomna att höra av er så
-            kollar vi på en möjlig lösning!
+            Vi vill ha en öppen information för att tydligt förmedla en trygg
+            och ärlig samarbetspartner. Nedan kan ni se några av de kunder som
+            vi jobbar med. Har ni några specifika önskemål så ta gärna kontakt
+            med oss så kan vi berätta mer om liknande case och kundönskemål vi
+            utfört.
           </span>
         </div>
+      </div>
+      <div>
+        <span style={cardTitle}>NÅGRA FÖRETAG SOM VI JOBBAR MED</span>
+      </div>
+      <div style={iconContainer}>
+        <img style={icons} src={j} alt="J" />
+        <img style={icons} src={abbot} alt="Abbot" />
+        <img style={icons} src={abbvie} alt="Abbvie" />
+        <img style={icons} src={claraLogo} alt="Miss Clara" />
+        <img style={icons} src={clavister} alt="Clavister" />
+      </div>
+      <div style={iconContainer}>
+        <img style={icons} src={hotellSkeppsholmen} alt="Skeppsholmen" />
+        <img style={icons} src={logo20170227182418} alt="Operakällaren" />
+        <img style={icons} src={nobisLogotypjpg2jpeg} alt="Nobis" />
+        <img src={stallmastaregardenLogo} alt="Stallmästargården" />
+        <img style={icons} src={einarMattson} alt="Einar & Mattson" />
       </div>
       <Link to="/kontakt" element={<Kontakt />}>
         <button style={button}>Kontakta Oss</button>
@@ -119,8 +130,6 @@ const topContainer = {
   padding: 20,
   width: "75%",
   marginBottom: 20,
-  marginRight: 85,
-  marginLeft: 85,
 };
 
 const topRight = {
@@ -177,7 +186,7 @@ const card = {
   flexDirection: "row",
   width: "50%",
   marginBottom: 10,
-  height: 300,
+  height: 150,
 };
 
 const cardTitle = {
@@ -227,4 +236,19 @@ const button = {
   transition: "transform 0.2s ease-in-out",
 };
 
-export default Tjanster;
+const iconContainer = {
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-between",
+  width: "75%",
+  marginBottom: 50,
+  marginTop: 50,
+};
+
+const icons = {
+  width: 170,
+  height: 120,
+  margin: 10,
+};
+
+export default Referenser;

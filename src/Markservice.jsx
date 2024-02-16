@@ -1,20 +1,20 @@
 import React from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import logoHome from "./assets/CCS_COLOR.png";
+import markImg from "./assets/markservice.jpeg";
+import markImg1 from "./assets/markservice1.jpeg";
 import { Link } from "react-router-dom";
 import Tjanster from "./Tjanster";
-import kontaktImg from "./assets/kontakt.jpeg";
-import Offert from "./Offert";
+import Kontakt from "./Kontakt";
 import Referenser from "./Referenser";
-import Markservice from "./Markservice";
 import KvalitetMiljo from "./KvalitetMiljo";
 import LedigaJobb from "./LedigaJobb";
 
-const Kontakt = () => {
+const Markservice = () => {
   return (
     <div style={body}>
       <div style={topContainer}>
-        {/* <span style={title}>Kontakt</span> */}
+        {/* <span style={title}>Markservice</span> */}
         <img style={logo} src={logoHome} alt="Logga" />
         <div style={topRight}>
           <span style={title}>Företag</span>
@@ -28,9 +28,7 @@ const Kontakt = () => {
         <Link to="/tjanster" element={<Tjanster />}>
           <span style={navItem}>VÅRA TJÄNSTER</span>
         </Link>
-        <Link to="/markservice" element={<Markservice />}>
-          <span style={navItem}>MARKSERVICE</span>
-        </Link>
+        <span style={navItem}>MARKSERVICE</span>
         <Link to="/referenser" element={<Referenser />}>
           <span style={navItem}>REFERENSER</span>
         </Link>
@@ -46,30 +44,56 @@ const Kontakt = () => {
           <span style={navItem}>KONTAKT</span>
         </Link>
       </div>
-      <img src={kontaktImg} style={{ width: "75%" }} alt="Kontakt image" />
+      <div
+        style={{
+          width: "75%",
+          display: "flex",
+          justifyContent: "space-around",
+          flexDirection: "row",
+        }}
+      >
+        <img src={markImg} style={{ width: "75%" }} alt="Markservice image" />
+        <img
+          src={markImg1}
+          style={{ width: "75%" }}
+          alt="Markservice image 1"
+        />
+      </div>
       <div style={spanContainer}>
-        <span style={title}>Kontakta oss</span>
+        <span style={title}>
+          Skötsel och underhåll av din fastighetstomt – året runt
+        </span>
         <span style={subtitle}>
-          Vi strävar efter att hitta långsiktiga samarbeten som fungerar för
-          alla parter. Är det något ni funderar över eller om ni vill veta mer
-          om hur vi jobbar eller våra tjänster, tveka inte att kontakta oss!
+          Vi förstår vikten av ett prydligt första intryck när det gäller ditt
+          företags utemiljö och fastighetsmark. Därför erbjuder vi utöver våra
+          städtjänster, heltäckande tjänster inom markservice för hela året.
         </span>
       </div>
-
-      <div style={underSpanContainer}>
-        <span style={cardTitle}>CC Service AB</span>
-        <span style={cardSubtitle}>Enhagsvägen 18, 187 40 Täby</span>
+      <div style={cardContainer}>
+        <span style={cardTitle}>MARKSERVICE EFTER DINA KRAV OCH ÖNSKEMÅL</span>
       </div>
-      <div style={underSpanContainer}>
-        <span style={cardTitle}>Telefon</span>
-        <span style={cardSubtitle}>08-506 363 88</span>
+      <div style={cardContainer}>
+        <div style={card}>
+          <span style={cardSubtitle}>
+            En välskött trädgård för din hyresfastighet eller planläggning av en
+            ny fastighetstomt – vi anpassar våra tjänster efter dina behov. Vi
+            har en hög kvalitets- och servicenivå och erbjuder hantering av
+            större trädgårdsarbete året runt. Det kan innebära allt från
+            beskärning av träd, snöröjning och halkbekämpning m.m. Vi sköter
+            plantering samt underhåll och städning i den form som passar er
+            utemiljö. Tillsammans kommer vi överens om hur ett löpande samarbete
+            kan utformas.
+          </span>
+        </div>
+        <div style={card}>
+          <span style={cardSubtitle}>
+            Hög flexibilitet och snabb service är en självklarhet. Oavsett ditt
+            behov hittar vi alltid en bra lösning. Välkommen att höra av dig!
+          </span>
+        </div>
       </div>
-      <div style={underSpanContainer}>
-        <span style={cardTitle}>Mail</span>
-        <span style={cardSubtitle}>info@ccservice.se</span>
-      </div>
-      <Link to="/offert" element={<Offert />}>
-        <button style={button}>Offertförfrågan</button>
+      <Link to="/kontakt" element={<Kontakt />}>
+        <button style={button}>Kontakta Oss</button>
       </Link>
     </div>
   );
@@ -102,6 +126,19 @@ const logo = {
   marginTop: 25,
 };
 
+const nav = {
+  display: "flex",
+  justifyContent: "space-around",
+  alignItems: "center",
+  flexDirection: "row",
+  padding: 20,
+  fontFamily: "dosis, sans-serif",
+  color: "#002554",
+  fontSize: 20,
+  fontWeight: 500,
+  width: "79%",
+};
+
 const title = {
   fontSize: 30,
   fontWeight: "bold",
@@ -129,39 +166,37 @@ const spanContainer = {
   justifyContent: "space-around",
   padding: 20,
   width: "75%",
+  marginBottom: 50,
 };
 
-const underSpanContainer = {
+const cardContainer = {
   display: "flex",
-  flexDirection: "column",
-  padding: 10,
+  alignItems: "center",
+  flexDirection: "row",
   width: "75%",
+  gap: 20,
+};
+
+const card = {
+  display: "flex",
+  flexDirection: "row",
+  width: "50%",
+  marginBottom: 50,
+  height: 150,
 };
 
 const cardTitle = {
   fontSize: 25,
   fontFamily: "dosis, sans-serif",
   color: "#002554",
+  marginBottom: 20,
 };
 
 const cardSubtitle = {
   fontSize: 15,
   fontFamily: "Merriweather, sans-serif",
   color: "#999a9a",
-  letterSpacing: 2,
-};
-
-const nav = {
-  display: "flex",
-  justifyContent: "space-around",
-  alignItems: "center",
-  flexDirection: "row",
-  padding: 20,
-  fontFamily: "dosis, sans-serif",
-  color: "#002554",
-  fontSize: 20,
-  fontWeight: 500,
-  width: "79%",
+  letterSpacing: 1,
 };
 
 const navItem = {
@@ -180,8 +215,8 @@ const button = {
   fontSize: 20,
   fontFamily: "dosis, sans-serif",
   marginTop: 50,
-  marginBottom: 150,
+  marginBottom: 50,
   transition: "transform 0.2s ease-in-out",
 };
 
-export default Kontakt;
+export default Markservice;
