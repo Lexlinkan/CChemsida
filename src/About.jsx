@@ -2,13 +2,13 @@ import React from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import logoHome from "./assets/CCS_COLOR.png";
 import { Link } from "react-router-dom";
-import ledigaJobbImg from "./assets/lediga-jobb.jpg";
 import Kontakt from "./Kontakt";
 import Markservice from "./Markservice";
 import Referenser from "./Referenser";
 import KvalitetMiljo from "./KvalitetMiljo";
 import Tjanster from "./Tjanster";
 import LedigaJobb from "./LedigaJobb";
+import Offert from "./Offert";
 
 import omOss from "./assets/omOss.jpeg";
 
@@ -39,7 +39,9 @@ const About = () => {
         <Link to="/kvalitetmiljo" element={<KvalitetMiljo />}>
           <span style={navItem}>KVALITET & MILJÖ</span>
         </Link>
-        <span style={navItem}>BEGÄR OFFERT</span>
+        <Link to="/offert" element={<Offert />}>
+          <span style={navItem}>BEGÄR OFFERT</span>
+        </Link>
         <Link to="/ledigajobb" element={<LedigaJobb />}>
           <span style={navItem}>LEDIGA JOBB</span>
         </Link>

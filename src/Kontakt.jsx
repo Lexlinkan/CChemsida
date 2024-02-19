@@ -38,7 +38,9 @@ const Kontakt = () => {
         <Link to="/kvalitetmiljo" element={<KvalitetMiljo />}>
           <span style={navItem}>KVALITET & MILJÖ</span>
         </Link>
-        <span style={navItem}>BEGÄR OFFERT</span>
+        <Link to="/offert" element={<Offert />}>
+          <span style={navItem}>BEGÄR OFFERT</span>
+        </Link>{" "}
         <Link to="/ledigajobb" element={<LedigaJobb />}>
           <span style={navItem}>LEDIGA JOBB</span>
         </Link>
@@ -70,10 +72,10 @@ const Kontakt = () => {
       <div style={underSpanContainer}>
         <span style={cardTitle}>Mail</span>
         <span style={cardSubtitle}>info@ccservice.se</span>
+        <Link to="/offert" element={<Offert />}>
+          <button style={button}>Offertförfrågan</button>
+        </Link>
       </div>
-      <Link to="/offert" element={<Offert />}>
-        <button style={button}>Offertförfrågan</button>
-      </Link>
     </div>
   );
 };

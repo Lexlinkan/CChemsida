@@ -26,6 +26,7 @@ function App() {
         <Route path="/kvalitetmiljo" element={<KvalitetMiljo />} />
         <Route path="/ledigajobb" element={<LedigaJobb />} />
         <Route path="/omoss" element={<About />} />
+        <Route path="/offert" element={<Offert />} />
       </Routes>
       <Footer />
     </Router>

@@ -79,7 +79,7 @@ const overLayF = {
   bottom: 0,
   left: 0,
   marginLeft: 14,
-  marginBottom: 11,
+  marginBottom: 15,
 };
 
 const privateImg = {
@@ -112,7 +112,7 @@ const spanStyleF = {
   position: "absolute",
   bottom: 0,
   left: 0,
-  margin: 45,
+  margin: 40,
   color: "white",
   fontWeight: 700,
   fontSize: 25,

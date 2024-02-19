@@ -11,6 +11,7 @@ import kvalitet_Miljo from "./assets/miljö_&_hållbarhet.jpeg";
 import isoCert from "./assets/cc-ISO-merge-3.png";
 import isoCert1 from "./assets/cc-ISO-merge-11.jpg";
 import About from "./About";
+import Offert from "./Offert";
 
 const KvalitetMiljo = () => {
   return (
@@ -39,7 +40,9 @@ const KvalitetMiljo = () => {
         <Link to="/kvalitetmiljo" element={<KvalitetMiljo />}>
           <span style={navItem}>KVALITET & MILJÖ</span>
         </Link>
-        <span style={navItem}>BEGÄR OFFERT</span>
+        <Link to="/offert" element={<Offert />}>
+          <span style={navItem}>BEGÄR OFFERT</span>
+        </Link>{" "}
         <Link to="/ledigajobb" element={<LedigaJobb />}>
           <span style={navItem}>LEDIGA JOBB</span>
         </Link>

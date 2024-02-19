@@ -12,6 +12,7 @@ import Markservice from "./Markservice";
 import KvalitetMiljo from "./KvalitetMiljo";
 import Referenser from "./Referenser";
 import LedigaJobb from "./LedigaJobb";
+import Offert from "./Offert";
 
 const Business = () => {
   return (
@@ -40,7 +41,9 @@ const Business = () => {
           <Link to="/kvalitetmiljo" element={<KvalitetMiljo />}>
             <span style={navItem}>KVALITET & MILJÖ</span>
           </Link>
-          <span style={navItem}>BEGÄR OFFERT</span>
+          <Link to="/offert" element={<Offert />}>
+            <span style={navItem}>BEGÄR OFFERT</span>
+          </Link>{" "}
           <Link to="/ledigajobb" element={<LedigaJobb />}>
             <span style={navItem}>LEDIGA JOBB</span>
           </Link>

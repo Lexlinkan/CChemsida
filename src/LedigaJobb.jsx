@@ -9,6 +9,7 @@ import Referenser from "./Referenser";
 import KvalitetMiljo from "./KvalitetMiljo";
 import Tjanster from "./Tjanster";
 import About from "./About";
+import Offert from "./Offert";
 
 const LedigaJobb = () => {
   return (
@@ -37,7 +38,9 @@ const LedigaJobb = () => {
         <Link to="/kvalitetmiljo" element={<KvalitetMiljo />}>
           <span style={navItem}>KVALITET & MILJÖ</span>
         </Link>
-        <span style={navItem}>BEGÄR OFFERT</span>
+        <Link to="/offert" element={<Offert />}>
+          <span style={navItem}>BEGÄR OFFERT</span>
+        </Link>{" "}
         <Link to="/ledigajobb" element={<LedigaJobb />}>
           <span style={navItem}>LEDIGA JOBB</span>
         </Link>
@@ -91,11 +94,11 @@ const LedigaJobb = () => {
               Vi söker dig som är en driven säljare med förmåga att själv
               planera ditt arbete och skapa affärer. I rollen ska du själv bygga
               upp en kundstock och tillbringa mycket tid med att prospektera och
-              ta kontakt med beslutsfattare på företag i Stockholmsområdet. <p></p> Du
-              måste därför triggas av kontakten med människor och att leta nya
-              affärsmöjligheter. Vi vill att du har erfarenhet av uppsökande
-              försäljning och kan visa på framgång i tidigare säljroller eller
-              som innesäljare/mötesbokare.
+              ta kontakt med beslutsfattare på företag i Stockholmsområdet.{" "}
+              <p></p> Du måste därför triggas av kontakten med människor och att
+              leta nya affärsmöjligheter. Vi vill att du har erfarenhet av
+              uppsökande försäljning och kan visa på framgång i tidigare
+              säljroller eller som innesäljare/mötesbokare.
             </p>
           </span>
         </div>
