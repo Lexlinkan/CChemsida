@@ -12,10 +12,8 @@ import About from "./About";
 import Offert from "./Offert";
 
 // Bilder till kungloggotyper
-import abbot from "./assets/abbot.jpg";
 import abbvie from "./assets/abbvie.jpg";
 import claraLogo from "./assets/clara-logo.jpg";
-import clavister from "./assets/clavister.jpg";
 import hotellSkeppsholmen from "./assets/hotell_skeppsholmen_logo-390x238.jpg";
 import logo20170227182418 from "./assets/logo-20170227182418.png";
 import nobisLogotypjpg2jpeg from "./assets/nobis_logotypjpg2jpeg.jpg";
@@ -28,7 +26,9 @@ const Referenser = () => {
     <div style={body}>
       <div style={topContainer}>
         {/* <span style={title}>Referenser</span> */}
-        <img style={logo} src={logoHome} alt="Logga" />
+        <Link to="/">
+          <img style={logo} src={logoHome} alt="Logga" />
+        </Link>{" "}
         <div style={topRight}>
           <span style={title}>Företag</span>
           <span style={subtitle}>
@@ -105,13 +105,11 @@ const Referenser = () => {
       </div>
       <div style={iconContainer}>
         <img style={icons} src={j} alt="J" />
-        <img style={icons} src={abbot} alt="Abbot" />
         <img style={icons} src={abbvie} alt="Abbvie" />
         <img style={icons} src={claraLogo} alt="Miss Clara" />
-        <img style={icons} src={clavister} alt="Clavister" />
+        <img style={icons} src={hotellSkeppsholmen} alt="Skeppsholmen" />
       </div>
       <div style={iconContainer}>
-        <img style={icons} src={hotellSkeppsholmen} alt="Skeppsholmen" />
         <img style={icons} src={logo20170227182418} alt="Operakällaren" />
         <img style={icons} src={nobisLogotypjpg2jpeg} alt="Nobis" />
         <img src={stallmastaregardenLogo} alt="Stallmästargården" />
@@ -252,7 +250,7 @@ const iconContainer = {
 };
 
 const icons = {
-  width: 170,
+  width: 190,
   height: 120,
   margin: 10,
 };

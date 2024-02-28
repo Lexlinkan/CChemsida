@@ -16,7 +16,9 @@ const Kontakt = () => {
     <div style={body}>
       <div style={topContainer}>
         {/* <span style={title}>Kontakt</span> */}
-        <img style={logo} src={logoHome} alt="Logga" />
+        <Link to="/">
+          <img style={logo} src={logoHome} alt="Logga" />
+        </Link>{" "}
         <div style={topRight}>
           <span style={title}>Företag</span>
           <span style={subtitle}>

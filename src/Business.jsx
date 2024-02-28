@@ -18,17 +18,10 @@ const Business = () => {
   return (
     <div>
       <div style={body}>
-        <div style={topContainer}>
-          <img style={logo} src={logoHome} alt="" />
-          <div style={topRight}>
-            <span style={title}>Företag</span>
-            <span style={subtitle}>
-              Gå till Privat
-              <ArrowForwardIcon style={{ verticalAlign: "middle" }} />
-            </span>
-          </div>
-        </div>
         <div style={nav}>
+        <Link to="/" >
+          <img style={logo} src={logoHome} alt="Logga" />
+        </Link>
           <Link to="/tjanster" element={<Tjanster />}>
             <span style={navItem}>VÅRA TJÄNSTER</span>
           </Link>
@@ -47,10 +40,22 @@ const Business = () => {
           <Link to="/ledigajobb" element={<LedigaJobb />}>
             <span style={navItem}>LEDIGA JOBB</span>
           </Link>
-          <span style={navItem}>OM OSS</span>
+          <Link to="/omoss" element={<Business />}>
+            <span style={navItem}>OM OSS</span>
+          </Link>
           <Link to="/kontakt" element={<Kontakt />}>
             <span style={navItem}>KONTAKT</span>
           </Link>
+        </div>
+        <div style={topContainer}>
+
+          <div style={topRight}>
+            <span style={title}>Företag</span>
+            <span style={subtitle}>
+              Gå till Privat
+              <ArrowForwardIcon style={{ verticalAlign: "middle" }} />
+            </span>
+          </div>
         </div>
         <img src={business} style={{ width: "75%" }} alt="Business image" />
         <div style={cardContainer}>
@@ -150,6 +155,7 @@ const subtitle = {
 const nav = {
   display: "flex",
   justifyContent: "space-around",
+  backgroundColoe: "lightgreen",
   alignItems: "center",
   flexDirection: "row",
   padding: 20,
@@ -157,7 +163,7 @@ const nav = {
   color: "#002554",
   fontSize: 20,
   fontWeight: 500,
-  width: "79%",
+  width: "100%",
 };
 
 const navItem = {

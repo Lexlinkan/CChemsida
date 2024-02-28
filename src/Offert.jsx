@@ -37,7 +37,9 @@ export const Offert = () => {
     <div style={body}>
       <div style={topContainer}>
         {/* <span style={title}>Våra Tjänster</span> */}
-        <img style={logo} src={logoHome} alt="Logga" />
+        <Link to="/">
+          <img style={logo} src={logoHome} alt="Logga" />
+        </Link>{" "}
         <div style={topRight}>
           <span style={title}>Företag</span>
           <span style={subtitle}>

@@ -1,30 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import logoHome from "./assets/CCS_COLOR.png";
 import { Link } from "react-router-dom";
-import Kontakt from "./Kontakt";
+import Tjanster from "./Tjanster";
 import Markservice from "./Markservice";
 import Referenser from "./Referenser";
+import KvalitetMiljo from "./KvalitetMiljo";
 import LedigaJobb from "./LedigaJobb";
-import Tjanster from "./Tjanster";
-import kvalitet_Miljo from "./assets/miljö_&_hållbarhet.jpeg";
-import isoCert from "./assets/cc-ISO-merge-3.png";
-import isoCert1 from "./assets/cc-ISO-merge-11.jpg";
 import About from "./About";
-import Offert from "./Offert";
+import Kontakt from "./Kontakt";
+import logoHome from "./assets/CCS_COLOR.png";
+import prisListImg from "./assets/prislista.jpeg";
 
-const KvalitetMiljo = () => {
+const PrisLista = () => {
+  const [selectedAbonemang, setSelectedAbonemang] = useState("ABONEMANG 1");
+
+  const handleClick = (abonemang) => {
+    setSelectedAbonemang(abonemang);
+  };
+
   return (
     <div style={body}>
       <div style={topContainer}>
-        {/* <span style={title}>Kvalitet & Miljö</span> */}
         <Link to="/">
           <img style={logo} src={logoHome} alt="Logga" />
         </Link>{" "}
         <div style={topRight}>
-          <span style={title}>Företag</span>
+          <span style={title}>PRIVAT</span>
           <span style={subtitle}>
-            Gå till Privat
+            Gå till Företag
             <ArrowForwardIcon style={{ verticalAlign: "middle" }} />
           </span>
         </div>
@@ -42,8 +45,8 @@ const KvalitetMiljo = () => {
         <Link to="/kvalitetmiljo" element={<KvalitetMiljo />}>
           <span style={navItem}>KVALITET & MILJÖ</span>
         </Link>
-        <Link to="/offert" element={<Offert />}>
-          <span style={navItem}>BEGÄR OFFERT</span>
+        <Link to="/prislista" element={<PrisLista />}>
+          <span style={navItem}>PRISLISTA</span>
         </Link>{" "}
         <Link to="/ledigajobb" element={<LedigaJobb />}>
           <span style={navItem}>LEDIGA JOBB</span>
@@ -55,11 +58,7 @@ const KvalitetMiljo = () => {
           <span style={navItem}>KONTAKT</span>
         </Link>
       </div>
-      <img
-        src={kvalitet_Miljo}
-        style={{ width: "75%" }}
-        alt="Våra Tjänster image"
-      />
+      <img src={prisListImg} style={{ width: "75%" }} alt="Prislista" />
       <div style={isoCertContainer}>
         <div style={spanContainer}>
           <span style={title}>Miljö och hållbarhet i fokus</span>
@@ -72,25 +71,118 @@ const KvalitetMiljo = () => {
             är vår framtid.
           </span>
         </div>
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={isoCertImageContainer}>
-            <img
-              style={{ height: 150, width: 250 }}
-              src={isoCert}
-              alt="ISO Certificat image"
-            />
-            <img
-              style={{ height: 150, width: 250 }}
-              src={isoCert1}
-              alt="ISO Certificat image1"
-            />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            backgroundColor: "#0076A8",
+            width: 800,
+            height: 450,
+          }}
+        >
+          <div style={tabellStyleTop}>
+            <span
+              style={
+                selectedAbonemang === "ABONEMANG 1"
+                  ? selectedStyle
+                  : unselectedStyle
+              }
+              onClick={() => handleClick("ABONEMANG 1")}
+            >
+              ABONEMANG 1
+            </span>
+
+            <span
+              style={
+                selectedAbonemang === "ABONEMANG 2"
+                  ? selectedStyle
+                  : unselectedStyle
+              }
+              onClick={() => handleClick("ABONEMANG 2")}
+            >
+              ABONEMANG 2
+            </span>
+            <span
+              style={
+                selectedAbonemang === "ABONEMANG 3"
+                  ? selectedStyle
+                  : unselectedStyle
+              }
+              onClick={() => handleClick("ABONEMANG 3")}
+            >
+              ABONEMANG 3
+            </span>
           </div>
-          <Link
-            to="https://ccservice.se/assets/Certifikat%202020.pdf"
-            element={<Kontakt />}
+
+          {selectedAbonemang === "ABONEMANG 1" && (
+            <table
+              style={{
+                color: "white",
+                textAlign: "center",
+                justifyContent: "space-between",
+                margin: 5,
+                fontFamily: "merriweather, sans-serif",
+                letterSpacing: 2,
+                lineHeight: 2,
+                marginTop: 20,
+              }}
+            >
+              <thead>
+                <tr>
+                  <th>Pris/mån</th>
+                  <th>Tim/tillfälle</th>
+                  <th>RUT-avdrag 50%</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2 924 kr</td>
+                  <td>2 tim/vecka</td>
+                  <td>1 462 kr</td>
+                </tr>
+                <tr>
+                  <td>4 386 kr</td>
+                  <td>3 tim/vecka</td>
+                  <td>2 193 kr</td>
+                </tr>
+                <tr>
+                  <td>5 848 kr</td>
+                  <td>4 tim/vecka</td>
+                  <td>2 924 kr</td>
+                </tr>
+                <tr>
+                  <td>7 310 kr</td>
+                  <td>5 tim/vecka</td>
+                  <td>3 655 kr</td>
+                </tr>
+                <tr>
+                  <td>8 772 kr</td>
+                  <td>6 tim/vecka</td>
+                  <td>4 386 kr</td>
+                </tr>
+                <tr>
+                  <td>10 234 kr</td>
+                  <td>7 tim/vecka</td>
+                  <td>5 117 kr</td>
+                </tr>
+                <tr>
+                  <td>11 696 kr</td>
+                  <td>8 tim/vecka</td>
+                  <td>5 848 kr</td>
+                </tr>
+              </tbody>
+            </table>
+          )}
+          <p
+            style={{
+              color: "white",
+              fontFamily: "merriweather, sans-serif",
+              textAlign: "left",
+              marginLeft: 20,
+            }}
           >
-            <button style={button}>Se våra Certifikat</button>
-          </Link>
+            Städning utförs vid 52 tillfällen per år
+          </p>
         </div>
       </div>
       <div style={cardContainer}>
@@ -145,6 +237,7 @@ const KvalitetMiljo = () => {
     </div>
   );
 };
+export default PrisLista;
 
 const body = {
   display: "flex",
@@ -251,22 +344,6 @@ const navItem = {
   cursor: "pointer",
 };
 
-const button = {
-  backgroundColor: "#002554",
-  color: "white",
-  width: 200,
-  padding: 10,
-  borderRadius: 5,
-  border: "none",
-  cursor: "pointer",
-  fontSize: 20,
-  fontFamily: "dosis, sans-serif",
-  marginTop: 25,
-  marginBottom: 50,
-  transition: "transform 0.2s ease-in-out",
-  margin: 30,
-};
-
 const isoCertContainer = {
   display: "flex",
   flexDirection: "row",
@@ -274,13 +351,33 @@ const isoCertContainer = {
   width: "75%",
 };
 
-const isoCertImageContainer = {
+const tabellStyle = {
   display: "flex",
   flexDirection: "row",
   justifyContent: "center",
   alignItems: "center",
-  width: "75%",
-  gap: 5,
+  backgroundColor: "white",
 };
 
-export default KvalitetMiljo;
+const tabellStyleTop = {
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-between",
+  backgroundColor: "white",
+  fontSize: 20,
+};
+
+const selectedStyle = {
+  backgroundColor: "#0076A8",
+  color: "white",
+  margin: 20,
+  cursor: "pointer",
+  fontFamily: "dosis, sans-serif",
+};
+
+const unselectedStyle = {
+  margin: 20,
+  backgroundColor: "white",
+  cursor: "pointer",
+  fontFamily: "dosis, sans-serif",
+};

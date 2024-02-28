@@ -11,7 +11,9 @@ const Home = () => {
   return (
     <div style={homePage}>
       <div>
-        <img style={logo} src={logoHome} alt="Logo" />
+        <Link to="/">
+          <img style={logo} src={logoHome} alt="Logga" />
+        </Link>
       </div>
       <div style={hero}>
         <div style={businessImg}>
@@ -27,6 +29,7 @@ const Home = () => {
             </div>
           </Link>
         </div>
+        <Link to="/privat">
         <div style={privateImg}>
           <img
             style={{ width: 700, height: 450, margin: 15 }}
@@ -38,6 +41,7 @@ const Home = () => {
             <span style={spanStyleP}>Privat</span>
           </div>
         </div>
+        </Link>
       </div>
       <div style={text}>
         <span style={title}>Välkommen till ett städbolag du kan lita på</span>

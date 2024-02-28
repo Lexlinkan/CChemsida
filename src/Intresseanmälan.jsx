@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import logoHome from "./assets/CCS_COLOR.png";
 import varaTjanser from "./assets/vara-tjanster.jpeg";
@@ -9,9 +10,30 @@ import Referenser from "./Referenser";
 import KvalitetMiljo from "./KvalitetMiljo";
 import LedigaJobb from "./LedigaJobb";
 import About from "./About";
-import Offert from "./Offert";
+import Tjanster from "./Tjanster";
+import intresseImg from "./assets/intresse.jpeg";
+import PrisLista from "./PrisLista";
 
-const Tjanster = () => {
+export const Intesseanmälan = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form.current, {
+        publicKey: "YOUR_PUBLIC_KEY",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
+
   return (
     <div style={body}>
       <div style={topContainer}>
@@ -20,9 +42,9 @@ const Tjanster = () => {
           <img style={logo} src={logoHome} alt="Logga" />
         </Link>{" "}
         <div style={topRight}>
-          <span style={title}>Företag</span>
+          <span style={title}>PRIVAT</span>
           <span style={subtitle}>
-            Gå till Privat
+            Gå till Företag
             <ArrowForwardIcon style={{ verticalAlign: "middle" }} />
           </span>
         </div>
@@ -40,8 +62,8 @@ const Tjanster = () => {
         <Link to="/kvalitetmiljo" element={<KvalitetMiljo />}>
           <span style={navItem}>KVALITET & MILJÖ</span>
         </Link>
-        <Link to="/offert" element={<Offert />}>
-          <span style={navItem}>BEGÄR OFFERT</span>
+        <Link to="/prislista" element={<PrisLista />}>
+          <span style={navItem}>PRISLISTA</span>
         </Link>{" "}
         <Link to="/ledigajobb" element={<LedigaJobb />}>
           <span style={navItem}>LEDIGA JOBB</span>
@@ -54,63 +76,45 @@ const Tjanster = () => {
         </Link>
       </div>
       <img
-        src={varaTjanser}
+        src={intresseImg}
         style={{ width: "75%" }}
         alt="Våra Tjänster image"
       />
       <div style={spanContainer}>
-        <span style={title}>Service som lever upp till dina krav</span>
+        <span style={title}>Skicka en intresseanmälan</span>
+      </div>
+      <div style={cardContainer}>
         <span style={subtitle}>
-          Våra kompetenta och engagerade medarbetare är de som bidrar till
-          företagets utveckling. Det innebär att vi kan garantera en hög
-          kvalitet och servicegrad. Men för att du ska bli övertygad så kan du
-          givetvis testa oss innan du bestämmer dig!
+          Vi lägger stor vikt vid att skapa ett ömsesidigt förtroende och
+          strävar alltid efter långsiktiga relationer. Därför vill vi såklart
+          hitta en så bra lösning som möjligt efter just era önskemål. <p></p>
+          <p style={cardSubtitle}>Fyll i vårt formulär så hör vi av oss! </p>
         </span>
+
+        <form
+          style={{ display: "flex", flexDirection: "column", width: "45%" }}
+          ref={form}
+          onSubmit={sendEmail}
+        >
+          <label>Företag</label>
+          <input style={card} type="text" name="user_name" />
+          <label>Kontaktperson</label>
+          <input style={card} type="email" name="user_email" />
+          <label>Telefon:</label>
+          <input style={card} type="text" name="Telefon" />
+          <label>E-post:</label>
+          <input style={card} type="text" name="Email" />
+          <label>Adress:</label>
+          <input style={card} type="text" name="Adress" />
+          <label>Postnummer:</label>
+          <input style={card} type="text" name="Postnummer" />
+          <label>Ort:</label>
+          <input style={card} type="text" name="Ort" />
+          <label>Kommentar</label>
+          <input style={cardComment} type="text" name="Kommentar" />
+          <input style={button} type="submit" value="Skicka" />
+        </form>
       </div>
-      <div style={cardContainer}>
-        <span style={cardTitle}>VÅRA FÖRETAGSTJÄNSTER</span>
-      </div>
-      <div style={cardContainer}>
-        <div style={card}>
-          <span style={cardSubtitle}>
-            CC Service är ett lokalvårdsföretag med ett brett utbud av olika
-            tjänster. Vi städar både kontor, hotell, trappor, skolor, etc. <p></p> För
-            oss är det alltid viktigt att upprätthålla en hög kvalitet och en
-            bra kundservice. Vår erfarenhet och vårt engagemang gör att vi kan
-            erbjuda kundanpassade lösningar med bästa möjliga service.
-            Miljöanpassad lokalvård är en självklarhet för oss och vi använder
-            alltid bara miljömedvetna och miljömärkta metoder och kemikalier.
-            <p>
-              Våra resurser och priser gör oss konkurrenskraftiga på marknaden,
-              men vi vill såklart att våra kunder ska känns sig trygga med oss
-              som samarbetspartner. Långsiktiga relationer skapas genom
-              förtroende. För att kunna känna på samarbetet och hitta ett
-              fungerande tillvägagångssätt innan man tecknar några löpande
-              avtal, erbjuder vi även engångstjänster.
-            </p>
-          </span>
-        </div>
-        <div style={card}>
-          <span style={cardSubtitle}>
-            Förutom våra ordinarie tjänster erbjuder vi även olika typer av
-            specialstädning så som:
-            <ul>
-              <li>golvvård</li>
-              <li>storstädning</li>
-              <li>fönsterputs</li>
-              <li>entrémattor</li>
-              <li>flyttstädning</li>
-              <li>mattvätt</li>
-              <li>m.m</li>
-            </ul>
-            Oavsett vad ni har behov av så är ni välkomna att höra av er så
-            kollar vi på en möjlig lösning!
-          </span>
-        </div>
-      </div>
-      <Link to="/kontakt" element={<Kontakt />}>
-        <button style={button}>Kontakta oss</button>
-      </Link>
     </div>
   );
 };
@@ -150,7 +154,7 @@ const title = {
   fontSize: 57,
   fontWeight: 500,
   marginTop: 40,
-  marginBottom: 40,
+  marginBottom: 20,
 };
 
 const subtitle = {
@@ -169,13 +173,13 @@ const spanContainer = {
   justifyContent: "space-around",
   padding: 20,
   width: "75%",
-  marginBottom: 50,
+  marginBottom: 30,
 };
 
 const cardContainer = {
   display: "flex",
-  alignItems: "center",
   flexDirection: "row",
+  justifyContent: "space-between",
   width: "75%",
   gap: 20,
 };
@@ -183,20 +187,20 @@ const cardContainer = {
 const card = {
   display: "flex",
   flexDirection: "row",
-  width: "50%",
+  width: 400,
   marginBottom: 10,
-  height: 300,
+  height: 40,
 };
-
-const cardTitle = {
-  fontSize: 25,
-  fontFamily: "dosis, sans-serif",
-  color: "#002554",
-  marginBottom: 20,
+const cardComment = {
+  display: "flex",
+  flexDirection: "row",
+  width: 400,
+  marginBottom: 10,
+  height: 150,
 };
 
 const cardSubtitle = {
-  fontSize: 15, //smalare font
+  fontSize: 15,
   fontFamily: "merriweather, sans-serif",
   color: "#999a9a",
   letterSpacing: 2,
@@ -230,9 +234,9 @@ const button = {
   cursor: "pointer",
   fontSize: 20,
   fontFamily: "dosis, sans-serif",
-  marginTop: 50,
-  marginBottom: 50,
+  marginTop: 20,
+  marginBottom: 20,
   transition: "transform 0.2s ease-in-out",
 };
 
-export default Tjanster;
+export default Intesseanmälan;
