@@ -18,10 +18,11 @@ const Business = () => {
   return (
     <div>
       <div style={body}>
+          <Link to="/">
+            <img style={logo} src={logoHome} alt="Logga" />
+          </Link>
+
         <div style={nav}>
-        <Link to="/" >
-          <img style={logo} src={logoHome} alt="Logga" />
-        </Link>
           <Link to="/tjanster" element={<Tjanster />}>
             <span style={navItem}>VÅRA TJÄNSTER</span>
           </Link>
@@ -47,17 +48,14 @@ const Business = () => {
             <span style={navItem}>KONTAKT</span>
           </Link>
         </div>
-        <div style={topContainer}>
+        <img src={business} style={{ width: "75%", marginBottom: 40 }} alt="Business image" />
 
-          <div style={topRight}>
-            <span style={title}>Företag</span>
-            <span style={subtitle}>
-              Gå till Privat
-              <ArrowForwardIcon style={{ verticalAlign: "middle" }} />
-            </span>
-          </div>
-        </div>
-        <img src={business} style={{ width: "75%" }} alt="Business image" />
+        <div style={text}>
+        <span style={textTitle}>Välkommen till ett städbolag du kan lita på</span>
+        <span style={textSubtitle}>“Era förväntningar – vårt mål"</span>
+      </div>
+
+        
         <div style={cardContainer}>
           <div style={card}>
             <span style={cardTitle}>Kunden i fokus</span>
@@ -122,6 +120,30 @@ const topContainer = {
   marginBottom: 20,
 };
 
+const text = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  flexDirection: "column",
+};
+
+const textTitle = {
+  fontSize: 45,
+  fontFamily: "dosis, sans-serif", // Updated to Dosis font
+  color: "#999a9a",
+  margin: 15,
+  letterSpacing: 1.5,
+};
+
+const textSubtitle = {
+  fontSize: 45,
+  fontFamily: "dosis, sans-serif", // Updated to Dosis font
+  color: "#999a9a",
+  margin: 15,
+  letterSpacing: 1.5,
+  marginBottom: 50,
+};
+
 const topRight = {
   display: "flex",
   flexDirection: "column",
@@ -129,9 +151,10 @@ const topRight = {
 };
 
 const logo = {
-  width: 114,
-  height: 141,
+  width: 154,
+  height: 181,
   marginTop: 25,
+  margin: 40
 };
 
 const title = {
@@ -163,7 +186,7 @@ const nav = {
   color: "#002554",
   fontSize: 20,
   fontWeight: 500,
-  width: "100%",
+  width: "78%",
 };
 
 const navItem = {

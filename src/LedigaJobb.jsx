@@ -14,19 +14,9 @@ import Offert from "./Offert";
 const LedigaJobb = () => {
   return (
     <div style={body}>
-      <div style={topContainer}>
-        {/* <span style={title}>Våra Tjänster</span> */}
-        <Link to="/">
-          <img style={logo} src={logoHome} alt="Logga" />
-        </Link>{" "}
-        <div style={topRight}>
-          <span style={title}>Företag</span>
-          <span style={subtitle}>
-            Gå till Privat
-            <ArrowForwardIcon style={{ verticalAlign: "middle" }} />
-          </span>
-        </div>
-      </div>
+      <Link to="/">
+        <img style={logo} src={logoHome} alt="Logga" />
+      </Link>{" "}
       <div style={nav}>
         <Link to="/tjanster" element={<Tjanster />}>
           <span style={navItem}>VÅRA TJÄNSTER</span>
@@ -151,9 +141,10 @@ const topRight = {
 };
 
 const logo = {
-  width: 114,
-  height: 141,
+  width: 154,
+  height: 181,
   marginTop: 25,
+  margin: 40,
 };
 
 const title = {
@@ -163,8 +154,7 @@ const title = {
   fontSize: 57,
   fontWeight: 500,
   marginTop: 40,
-  marginBottom: 40,
-  maxWidth: 800,
+  marginBottom: 20,
 };
 
 const subtitle = {
@@ -172,7 +162,7 @@ const subtitle = {
   cursor: "pointer",
   fontFamily: "merriweather, sans-serif",
   color: "#999a9a",
-  maxWidth: 800,
+  maxWidth: 600,
   letterSpacing: 1,
   lineHeight: 1.5,
 };

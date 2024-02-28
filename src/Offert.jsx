@@ -35,19 +35,9 @@ export const Offert = () => {
 
   return (
     <div style={body}>
-      <div style={topContainer}>
-        {/* <span style={title}>Våra Tjänster</span> */}
-        <Link to="/">
-          <img style={logo} src={logoHome} alt="Logga" />
-        </Link>{" "}
-        <div style={topRight}>
-          <span style={title}>Företag</span>
-          <span style={subtitle}>
-            Gå till Privat
-            <ArrowForwardIcon style={{ verticalAlign: "middle" }} />
-          </span>
-        </div>
-      </div>
+      <Link to="/">
+        <img style={logo} src={logoHome} alt="Logga" />
+      </Link>{" "}
       <div style={nav}>
         <Link to="/tjanster" element={<Tjanster />}>
           <span style={navItem}>VÅRA TJÄNSTER</span>
@@ -139,9 +129,10 @@ const topRight = {
 };
 
 const logo = {
-  width: 114,
-  height: 141,
+  width: 154,
+  height: 181,
   marginTop: 25,
+  margin: 40,
 };
 
 const title = {

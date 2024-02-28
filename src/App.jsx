@@ -15,6 +15,8 @@ import Privat from './Privat';
 import Intresseanmälan from './Intresseanmälan';
 import PrisLista from './PrisLista';
 
+
+
 function App() {
   return (
     <Router>
@@ -32,7 +34,7 @@ function App() {
         <Route path="/omoss" element={<About />} />
         <Route path="/offert" element={<Offert />} />
         <Route path="/intresseanmalan" element={<Intresseanmälan />} />
-        <Route path="/prislista" element={<PrisLista />} />
+        {/* <Route path="/prislista" element={<PrisLista />} /> */}
       </Routes>
       <Footer />
     </Router>
