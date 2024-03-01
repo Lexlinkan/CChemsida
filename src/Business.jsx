@@ -1,7 +1,6 @@
 import React from "react";
 import business from "./assets/homePageF.jpeg";
 import logoHome from "./assets/CCS_COLOR.png";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import kundIFokus from "./assets/kund_i_fokus.jpeg";
 import kvalitetMiljo from "./assets/miljö_&_hållbarhet.jpeg";
 import offertImg from "./assets/offertImg.jpeg";
@@ -13,49 +12,66 @@ import KvalitetMiljo from "./KvalitetMiljo";
 import Referenser from "./Referenser";
 import LedigaJobb from "./LedigaJobb";
 import Offert from "./Offert";
+import overlayimgF from "./assets/homepageFöretag.png";
 
 const Business = () => {
   return (
     <div>
       <div style={body}>
-          <Link to="/">
-            <img style={logo} src={logoHome} alt="Logga" />
-          </Link>
-
+        <Link to="/">
+          <img style={logo} src={logoHome} alt="Logga" />
+        </Link>
         <div style={nav}>
-          <Link to="/tjanster" element={<Tjanster />}>
+          <Link style={linkStyle} to="/tjanster">
             <span style={navItem}>VÅRA TJÄNSTER</span>
           </Link>
-          <Link to="/markservice" element={<Markservice />}>
+          <Link style={linkStyle} to="/markservice">
             <span style={navItem}>MARKSERVICE</span>
           </Link>
-          <Link to="/referenser" element={<Referenser />}>
+          <Link style={linkStyle} to="/referenser">
             <span style={navItem}>REFERENSER</span>
           </Link>
-          <Link to="/kvalitetmiljo" element={<KvalitetMiljo />}>
+          <Link style={linkStyle} to="/kvalitetmiljo">
             <span style={navItem}>KVALITET & MILJÖ</span>
           </Link>
-          <Link to="/offert" element={<Offert />}>
+          <Link style={linkStyle} to="/offert">
             <span style={navItem}>BEGÄR OFFERT</span>
           </Link>{" "}
-          <Link to="/ledigajobb" element={<LedigaJobb />}>
+          <Link style={linkStyle} to="/ledigajobb">
             <span style={navItem}>LEDIGA JOBB</span>
           </Link>
-          <Link to="/omoss" element={<Business />}>
+          <Link style={linkStyle} to="/omoss">
             <span style={navItem}>OM OSS</span>
           </Link>
-          <Link to="/kontakt" element={<Kontakt />}>
+          <Link style={linkStyle} to="/kontakt">
             <span style={navItem}>KONTAKT</span>
           </Link>
         </div>
-        <img src={business} style={{ width: "75%", marginBottom: 40 }} alt="Business image" />
+
+        <div style={businessImg}>
+          <Link to="/business" element={<Business />}>
+            <img
+              style={{ width: "75vw", marginBottom: 40 }}
+              src={business}
+              alt="Business"
+            />
+            <div style={overLayF}>
+              <img
+                src={overlayimgF}
+                style={{ width: "100%" }}
+                alt="Overlay img Business"
+              />
+            </div>
+          </Link>
+        </div>
 
         <div style={text}>
-        <span style={textTitle}>Välkommen till ett städbolag du kan lita på</span>
-        <span style={textSubtitle}>“Era förväntningar – vårt mål"</span>
-      </div>
+          <span style={textTitle}>
+            Välkommen till ett städbolag du kan lita på
+          </span>
+          <span style={textSubtitle}>“Era förväntningar – vårt mål"</span>
+        </div>
 
-        
         <div style={cardContainer}>
           <div style={card}>
             <span style={cardTitle}>Kunden i fokus</span>
@@ -88,13 +104,32 @@ const Business = () => {
           </div>
         </div>
         <div style={imageContainer}>
-          <img
-            style={{ width: 350, height: 300 }}
-            src={kundIFokus}
-            alt="Kund i Fokus"
-          />
-          <img style={{ width: 350, height: 300 }} src={kvalitetMiljo} alt="" />
-          <img style={{ width: 350, height: 300 }} src={offertImg} alt="" />
+          <div style={{ position: "relative" }}>
+            <Link to="/referenser">
+              <img
+                style={{ width: 350, height: 300 }}
+                src={kundIFokus}
+                alt=""
+              />
+              <button style={buttonStyle}>Läs Mer</button>
+            </Link>
+          </div>
+          <div style={{ position: "relative" }}>
+            <Link to="/kvalitetmiljo">
+              <img
+                style={{ width: 350, height: 300 }}
+                src={kvalitetMiljo}
+                alt=""
+              />
+              <button style={buttonStyle}>Läs Mer</button>
+            </Link>
+          </div>
+          <div style={{ position: "relative" }}>
+            <Link to="/tjanster">
+              <img style={{ width: 350, height: 300 }} src={offertImg} alt="" />
+              <button style={buttonStyle}>Läs Mer</button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
@@ -154,7 +189,7 @@ const logo = {
   width: 154,
   height: 181,
   marginTop: 25,
-  margin: 40
+  margin: 40,
 };
 
 const title = {
@@ -187,11 +222,26 @@ const nav = {
   fontSize: 20,
   fontWeight: 500,
   width: "78%",
+  textDecoration: "none",
 };
 
 const navItem = {
   transition: "transform 0.2s ease-in-out",
-  cursor: "pointer",
+  cursor: "default",
+  textDecoration: "none",
+};
+
+const businessImg = {
+  position: "relative",
+  display: "flex",
+};
+
+const overLayF = {
+  position: "absolute",
+  bottom: 0,
+  left: 0,
+  marginLeft: -1,
+  marginBottom: 40,
 };
 
 const cardContainer = {
@@ -232,4 +282,26 @@ const imageContainer = {
   flexDirection: "row",
   width: "75%",
   marginBottom: 70,
+};
+
+const buttonStyle = {
+  position: "absolute",
+  top: 5,
+  left: 5,
+  padding: "4px 8px",
+  background: "rgba(0, 37, 84, 0.7)",
+  color: "#fff",
+  border: "none",
+  borderRadius: 5,
+  cursor: "pointer",
+  fontFamily: "dosis, sans-serif",
+  transition: "background-color 0.3s ease",
+};
+
+const linkStyle = {
+  textDecoration: "none",
+  color: "#002554",
+  fontSize: 20,
+  fontWeight: 500,
+  fontFamily: "dosis, sans-serif",
 };

@@ -1,123 +1,126 @@
 import React from "react";
-import business from "./assets/homePageF.jpeg";
-import logoHome from "./assets/CCS_COLOR.png";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import kundIFokus from "./assets/kund_i_fokus.jpeg";
-import kvalitetMiljo from "./assets/miljö_&_hållbarhet.jpeg";
-import offertImg from "./assets/offertImg.jpeg";
 import { Link } from "react-router-dom";
-import Tjanster from "./Tjanster";
-import Kontakt from "./Kontakt";
-import Markservice from "./Markservice";
-import KvalitetMiljo from "./KvalitetMiljo";
-import Referenser from "./Referenser";
-import LedigaJobb from "./LedigaJobb";
-import Offert from "./Offert";
+import overlayimgF from "./assets/homepageFöretag.png";
+import overlayimgP from "./assets/homepagePrivat.png";
+import logoHome from "./assets/CCS_COLOR.png";
+import business from "./assets/homePageF.jpeg";
+import privat from "./assets/homepageP.jpeg";
+import Business from "./Business";
 
-const Business = () => {
+const Home = () => {
   return (
-    <div>
-      <div style={body}>
-          <Link to="/">
-            <img style={logo} src={logoHome} alt="Logga" />
-          </Link>
-
-        <div style={nav}>
-          <Link to="/tjanster" element={<Tjanster />}>
-            <span style={navItem}>VÅRA TJÄNSTER</span>
-          </Link>
-          <Link to="/markservice" element={<Markservice />}>
-            <span style={navItem}>MARKSERVICE</span>
-          </Link>
-          <Link to="/referenser" element={<Referenser />}>
-            <span style={navItem}>REFERENSER</span>
-          </Link>
-          <Link to="/kvalitetmiljo" element={<KvalitetMiljo />}>
-            <span style={navItem}>KVALITET & MILJÖ</span>
-          </Link>
-          <Link to="/offert" element={<Offert />}>
-            <span style={navItem}>BEGÄR OFFERT</span>
-          </Link>{" "}
-          <Link to="/ledigajobb" element={<LedigaJobb />}>
-            <span style={navItem}>LEDIGA JOBB</span>
-          </Link>
-          <Link to="/omoss" element={<Business />}>
-            <span style={navItem}>OM OSS</span>
-          </Link>
-          <Link to="/kontakt" element={<Kontakt />}>
-            <span style={navItem}>KONTAKT</span>
-          </Link>
-        </div>
-        <img src={business} style={{ width: "75%", marginBottom: 40 }} alt="Business image" />
-
-        <div style={text}>
-        <span style={textTitle}>Välkommen till ett städbolag du kan lita på</span>
-        <span style={textSubtitle}>“Era förväntningar – vårt mål"</span>
+    <div style={homePage}>
+      <div>
+        <Link to="/">
+          <img style={logo} src={logoHome} alt="Logga" />
+        </Link>
       </div>
-
-        
-        <div style={cardContainer}>
-          <div style={card}>
-            <span style={cardTitle}>Kunden i fokus</span>
-            <p style={cardSubtitle}>
-              Hög tillgänglighet och flexibilitet är viktiga faktorer i vårt
-              dagliga arbete. Även med mycket kort varsel kan vi snabbt vara på
-              plats. Men det handlar också om snabb återkoppling vid eventuell
-              reklamation.
-            </p>
-          </div>
-          <div style={card}>
-            <span style={cardTitle}>Kvalitet och miljö</span>
-            <p style={cardSubtitle}>
-              Vår affärsidé är att utföra miljöanpassad lokalvård och andra
-              servicetjänster med hög kvalitet och professionellt kundbemötande.
-              Ett miljömedvetet tänk är ständigt närvarande i vårt dagliga
-              arbete. Vi är miljöcertifierade enligt ISO 9001:2015 och
-              14001:2015, vilket vi är väldigt stolta över. Miljön är vår
-              framtid.
-            </p>
-          </div>
-          <div style={card}>
-            <span style={cardTitle}>Service som lever upp till dina krav</span>
-            <p style={cardSubtitle}>
-              Våra kompetenta och engagerade medarbetare är de som bidrar till
-              företagets utveckling. Det innebär att vi kan garantera en hög
-              kvalitet och servicegrad. Men för att du ska bli övertygad så kan
-              du givetvis testa oss innan du bestämmer dig!
-            </p>
-          </div>
+      <div style={hero}>
+        <div style={businessImg}>
+          <Link to="/business" element={<Business />}>
+            <img
+              style={{ width: 700, height: 450, margin: 15 }}
+              src={business}
+              alt="Business"
+            />
+            <div style={overLayF}>
+              <img src={overlayimgF} alt="Overlay img Business" />
+              <span style={spanStyleF}>Företag</span>
+            </div>
+          </Link>
         </div>
-        <div style={imageContainer}>
+        <Link to="/privat">
+        <div style={privateImg}>
           <img
-            style={{ width: 350, height: 300 }}
-            src={kundIFokus}
-            alt="Kund i Fokus"
+            style={{ width: 700, height: 450, margin: 15 }}
+            src={privat}
+            alt="Private"
           />
-          <img style={{ width: 350, height: 300 }} src={kvalitetMiljo} alt="" />
-          <img style={{ width: 350, height: 300 }} src={offertImg} alt="" />
+          <div style={overlayPContainer}>
+            <img style={overlayP} src={overlayimgP} alt="overlay img Private" />
+            <span style={spanStyleP}>Privat</span>
+          </div>
         </div>
+        </Link>
+      </div>
+      <div style={text}>
+        <span style={title}>Välkommen till ett städbolag du kan lita på</span>
+        <span style={subtitle}>“Era förväntningar – vårt mål"</span>
       </div>
     </div>
   );
 };
 
-export default Business;
+const logo = {
+  with: 300,
+  height: 200,
+  marginTop: 25,
+};
 
-const body = {
+const homePage = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   flexDirection: "column",
-  height: "vh",
+  height: "100vh",
 };
 
-const topContainer = {
+const hero = {
   display: "flex",
-  justifyContent: "space-between",
   alignItems: "center",
-  padding: 20,
-  width: "75%",
-  marginBottom: 20,
+  justifyContent: "center",
+  flexDirection: "row",
+  padding: 25,
+};
+
+const businessImg = {
+  position: "relative",
+  display: "flex",
+};
+
+const overLayF = {
+  position: "absolute",
+  bottom: 0,
+  left: 0,
+  marginLeft: 14,
+  marginBottom: 15,
+};
+
+const privateImg = {
+  position: "relative",
+  display: "flex",
+};
+
+const overlayPContainer = {
+  position: "relative",
+};
+
+const overlayP = {
+  position: "absolute",
+  top: 0,
+  right: 0,
+  margin: 15,
+};
+
+const spanStyleP = {
+  position: "absolute",
+  top: 0,
+  right: 0,
+  margin: 45,
+  color: "white",
+  fontWeight: 700,
+  fontSize: 25,
+  fontFamily: "dosis, sans-serif", // Updated to Dosis font
+};
+const spanStyleF = {
+  position: "absolute",
+  bottom: 0,
+  left: 0,
+  margin: 40,
+  color: "white",
+  fontWeight: 700,
+  fontSize: 25,
+  fontFamily: "dosis, sans-serif", // Updated to Dosis font
 };
 
 const text = {
@@ -127,7 +130,7 @@ const text = {
   flexDirection: "column",
 };
 
-const textTitle = {
+const title = {
   fontSize: 45,
   fontFamily: "dosis, sans-serif", // Updated to Dosis font
   color: "#999a9a",
@@ -135,7 +138,7 @@ const textTitle = {
   letterSpacing: 1.5,
 };
 
-const textSubtitle = {
+const subtitle = {
   fontSize: 45,
   fontFamily: "dosis, sans-serif", // Updated to Dosis font
   color: "#999a9a",
@@ -144,92 +147,4 @@ const textSubtitle = {
   marginBottom: 50,
 };
 
-const topRight = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-};
-
-const logo = {
-  width: 154,
-  height: 181,
-  marginTop: 25,
-  marginBottom: 25,
-};
-
-const title = {
-  fontSize: 40,
-  fontWeight: "bold",
-  marginBottom: 20,
-  fontFamily: "dosis, sans-serif",
-  color: "#002554",
-  fontSize: 57,
-  fontWeight: 500,
-  marginTop: 40,
-};
-
-const subtitle = {
-  fontSize: 25,
-  cursor: "pointer",
-  fontFamily: "dosis, sans-serif",
-  color: "#999a9a",
-};
-
-const nav = {
-  display: "flex",
-  justifyContent: "space-around",
-  backgroundColoe: "lightgreen",
-  alignItems: "center",
-  flexDirection: "row",
-  padding: 20,
-  fontFamily: "dosis, sans-serif",
-  color: "#002554",
-  fontSize: 20,
-  fontWeight: 500,
-  width: "78%",
-};
-
-const navItem = {
-  transition: "transform 0.2s ease-in-out",
-  cursor: "pointer",
-};
-
-const cardContainer = {
-  display: "flex",
-  justifyContent: "space-around",
-  flexDirection: "row",
-  padding: 20,
-  paddintBottom: 0,
-  width: "75%",
-};
-
-const card = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "start",
-  width: 350,
-};
-
-const cardTitle = {
-  fontSize: 25,
-  fontFamily: "dosis, sans-serif",
-  color: "#002554",
-  margin: 15,
-};
-
-const cardSubtitle = {
-  fontSize: 15,
-  fontFamily: "Merriweather, serif",
-  color: "#999a9a",
-  margin: 15,
-  letterSpacing: 2,
-};
-
-const imageContainer = {
-  display: "flex",
-  justifyContent: "space-around",
-  alignItems: "center",
-  flexDirection: "row",
-  width: "75%",
-  marginBottom: 70,
-};
+export default Home;

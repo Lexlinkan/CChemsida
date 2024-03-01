@@ -28,28 +28,28 @@ const Referenser = () => {
         <img style={logo} src={logoHome} alt="Logga" />
       </Link>{" "}
       <div style={nav}>
-        <Link to="/tjanster" element={<Tjanster />}>
+        <Link style={linkStyle} to="/tjanster">
           <span style={navItem}>VÅRA TJÄNSTER</span>
         </Link>
-        <Link to="/markservice" element={<Markservice />}>
+        <Link style={linkStyle} to="/markservice">
           <span style={navItem}>MARKSERVICE</span>
         </Link>
-        <Link to="/referenser" element={<Referenser />}>
+        <Link style={linkStyle} to="/referenser">
           <span style={navItem}>REFERENSER</span>
         </Link>
-        <Link to="/kvalitetmiljo" element={<KvalitetMiljo />}>
+        <Link style={linkStyle} to="/kvalitetmiljo">
           <span style={navItem}>KVALITET & MILJÖ</span>
         </Link>
-        <Link to="/offert" element={<Offert />}>
+        <Link style={linkStyle} to="/offert">
           <span style={navItem}>BEGÄR OFFERT</span>
         </Link>{" "}
-        <Link to="/ledigajobb" element={<LedigaJobb />}>
+        <Link style={linkStyle} to="/ledigajobb">
           <span style={navItem}>LEDIGA JOBB</span>
         </Link>
-        <Link to="/omoss" element={<About />}>
+        <Link style={linkStyle} to="/omoss">
           <span style={navItem}>OM OSS</span>
-        </Link>{" "}
-        <Link to="/kontakt" element={<Kontakt />}>
+        </Link>
+        <Link style={linkStyle} to="/kontakt">
           <span style={navItem}>KONTAKT</span>
         </Link>
       </div>
@@ -213,7 +213,7 @@ const nav = {
 
 const navItem = {
   transition: "transform 0.2s ease-in-out",
-  cursor: "pointer",
+  cursor: "default",
 };
 
 const button = {
@@ -244,6 +244,14 @@ const icons = {
   width: 190,
   height: 120,
   margin: 10,
+};
+
+const linkStyle = {
+  textDecoration: "none",
+  color: "#002554",
+  fontSize: 20,
+  fontWeight: 500,
+  fontFamily: "dosis, sans-serif",
 };
 
 export default Referenser;
