@@ -5,13 +5,6 @@ import kundIFokus from "./assets/kund_i_fokus.jpeg";
 import kvalitetMiljo from "./assets/miljö_&_hållbarhet.jpeg";
 import offertImg from "./assets/offertImg.jpeg";
 import { Link } from "react-router-dom";
-import Tjanster from "./Tjanster";
-import Kontakt from "./Kontakt";
-import Markservice from "./Markservice";
-import KvalitetMiljo from "./KvalitetMiljo";
-import Referenser from "./Referenser";
-import LedigaJobb from "./LedigaJobb";
-import Offert from "./Offert";
 import overlayimgF from "./assets/homepageFöretag.png";
 
 const Business = () => {
@@ -143,7 +136,7 @@ const body = {
   justifyContent: "center",
   alignItems: "center",
   flexDirection: "column",
-  height: "vh",
+  minHeight: "100vh",
 };
 
 const topContainer = {
@@ -304,4 +297,19 @@ const linkStyle = {
   fontSize: 20,
   fontWeight: 500,
   fontFamily: "dosis, sans-serif",
+};
+
+
+const mediaQueries = {
+  tablet: "@media only screen and (max-width: 1024px)",
+  mobile: "@media only screen and (max-width: 600px)",
+};
+
+const businessImgResponsive = {
+  [mediaQueries.tablet]: {
+    width: "90vw",
+  },
+  [mediaQueries.mobile]: {
+    width: "100vw",
+  },
 };
