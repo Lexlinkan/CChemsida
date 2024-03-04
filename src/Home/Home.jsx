@@ -5,7 +5,7 @@ import overlayimgP from "./assets/homepagePrivat.png";
 import logoHome from "./assets/CCS_COLOR.png";
 import business from "./assets/homePageF.jpeg";
 import privat from "./assets/homepageP.jpeg";
-import Business from "./Business";
+import Business from "../Business/Business";
 
 const Home = () => {
   return (

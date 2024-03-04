@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Link } from "react-router-dom";
-import Tjanster from "./Tjanster";
+import Tjanster from "../Tjanster";
 import Markservice from "./Markservice";
-import Referenser from "./Referenser";
-import KvalitetMiljo from "./KvalitetMiljo";
+import Referenser from "../Referenser";
+import KvalitetMiljo from "./Kvalitet & Miljö/KvalitetMiljo";
 import LedigaJobb from "./LedigaJobb";
-import About from "./About";
+import About from "../About/About";
 import Kontakt from "./Kontakt";
 import logoHome from "./assets/CCS_COLOR.png";
 import prisListImg from "./assets/prislista.jpeg";

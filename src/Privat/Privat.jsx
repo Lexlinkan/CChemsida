@@ -6,14 +6,14 @@ import kundIFokus from "./assets/kund_i_fokus.jpeg";
 import kvalitetMiljo from "./assets/miljö_&_hållbarhet.jpeg";
 import offertImg from "./assets/offertImg.jpeg";
 import { Link } from "react-router-dom";
-import Tjanster from "./Tjanster";
+import Tjanster from "../Tjanster";
 import Kontakt from "./Kontakt";
 import Markservice from "./Markservice";
 import KvalitetMiljo from "./KvalitetMiljo";
 import LedigaJobb from "./LedigaJobb";
 import Offert from "./Offert";
-import Business from "./Business";
-import Referenser from "./Referenser";
+import Business from "../Business/Business";
+import Referenser from "../Referenser/Referenser";
 // import Intresseanmälan from "./Intresseanmälan";
 // import PrisLista from "./PrisLista";
 

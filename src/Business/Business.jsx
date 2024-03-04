@@ -1,11 +1,13 @@
 import React from "react";
-import business from "./assets/homePageF.jpeg";
-import logoHome from "./assets/CCS_COLOR.png";
-import kundIFokus from "./assets/kund_i_fokus.jpeg";
-import kvalitetMiljo from "./assets/miljö_&_hållbarhet.jpeg";
-import offertImg from "./assets/offertImg.jpeg";
 import { Link } from "react-router-dom";
-import overlayimgF from "./assets/homepageFöretag.png";
+import { body, text, textTitle, textSubtitle, logo, nav, navItem, businessImg, overLayF, cardContainer, card, cardTitle, cardSubtitle, imageContainer, buttonStyle, linkStyle } from "./styles";
+// Bilder
+import foretag from "../assets/homePageF.jpeg";
+import logoHome from "../assets/CCS_COLOR.png";
+import kundIFokus from "../assets/kund_i_fokus.jpeg";
+import kvalitetMiljo from "../assets/miljö_&_hållbarhet.jpeg";
+import offertImg from "../assets/offertImg.jpeg";
+import overlayimgF from "../assets/homepageFöretag.png";
 
 const Business = () => {
   return (
@@ -45,7 +47,7 @@ const Business = () => {
           <Link to="/business" element={<Business />}>
             <img
               style={{ width: "75vw", marginBottom: 40 }}
-              src={business}
+              src={foretag}
               alt="Business"
             />
             <div style={overLayF}>
@@ -131,185 +133,3 @@ const Business = () => {
 
 export default Business;
 
-const body = {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  flexDirection: "column",
-  minHeight: "100vh",
-};
-
-const topContainer = {
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-  padding: 20,
-  width: "75%",
-  marginBottom: 20,
-};
-
-const text = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  flexDirection: "column",
-};
-
-const textTitle = {
-  fontSize: 45,
-  fontFamily: "dosis, sans-serif", // Updated to Dosis font
-  color: "#999a9a",
-  margin: 15,
-  letterSpacing: 1.5,
-};
-
-const textSubtitle = {
-  fontSize: 45,
-  fontFamily: "dosis, sans-serif", // Updated to Dosis font
-  color: "#999a9a",
-  margin: 15,
-  letterSpacing: 1.5,
-  marginBottom: 50,
-};
-
-const topRight = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-};
-
-const logo = {
-  width: 154,
-  height: 181,
-  marginTop: 25,
-  margin: 40,
-};
-
-const title = {
-  fontSize: 40,
-  fontWeight: "bold",
-  marginBottom: 20,
-  fontFamily: "dosis, sans-serif",
-  color: "#002554",
-  fontSize: 57,
-  fontWeight: 500,
-  marginTop: 40,
-};
-
-const subtitle = {
-  fontSize: 25,
-  cursor: "pointer",
-  fontFamily: "dosis, sans-serif",
-  color: "#999a9a",
-};
-
-const nav = {
-  display: "flex",
-  justifyContent: "space-around",
-  backgroundColoe: "lightgreen",
-  alignItems: "center",
-  flexDirection: "row",
-  padding: 20,
-  fontFamily: "dosis, sans-serif",
-  color: "#002554",
-  fontSize: 20,
-  fontWeight: 500,
-  width: "78%",
-  textDecoration: "none",
-};
-
-const navItem = {
-  transition: "transform 0.2s ease-in-out",
-  cursor: "default",
-  textDecoration: "none",
-};
-
-const businessImg = {
-  position: "relative",
-  display: "flex",
-};
-
-const overLayF = {
-  position: "absolute",
-  bottom: 0,
-  left: 0,
-  marginLeft: -1,
-  marginBottom: 40,
-};
-
-const cardContainer = {
-  display: "flex",
-  justifyContent: "space-around",
-  flexDirection: "row",
-  padding: 20,
-  paddintBottom: 0,
-  width: "75%",
-};
-
-const card = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "start",
-  width: 350,
-};
-
-const cardTitle = {
-  fontSize: 25,
-  fontFamily: "dosis, sans-serif",
-  color: "#002554",
-  margin: 15,
-};
-
-const cardSubtitle = {
-  fontSize: 15,
-  fontFamily: "Merriweather, serif",
-  color: "#999a9a",
-  margin: 15,
-  letterSpacing: 2,
-};
-
-const imageContainer = {
-  display: "flex",
-  justifyContent: "space-around",
-  alignItems: "center",
-  flexDirection: "row",
-  width: "75%",
-  marginBottom: 70,
-};
-
-const buttonStyle = {
-  position: "absolute",
-  top: 5,
-  left: 5,
-  padding: "4px 8px",
-  background: "rgba(0, 37, 84, 0.7)",
-  color: "#fff",
-  border: "none",
-  borderRadius: 5,
-  cursor: "pointer",
-  fontFamily: "dosis, sans-serif",
-  transition: "background-color 0.3s ease",
-};
-
-const linkStyle = {
-  textDecoration: "none",
-  color: "#002554",
-  fontSize: 20,
-  fontWeight: 500,
-  fontFamily: "dosis, sans-serif",
-};
-
-
-const mediaQueries = {
-  tablet: "@media only screen and (max-width: 1024px)",
-  mobile: "@media only screen and (max-width: 600px)",
-};
-
-const businessImgResponsive = {
-  [mediaQueries.tablet]: {
-    width: "90vw",
-  },
-  [mediaQueries.mobile]: {
-    width: "100vw",
-  },
-};

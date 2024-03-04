@@ -1,17 +1,12 @@
 import React from "react";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import logoHome from "./assets/CCS_COLOR.png";
 import { Link } from "react-router-dom";
-import Kontakt from "./Kontakt";
-import Markservice from "./Markservice";
-import Referenser from "./Referenser";
-import LedigaJobb from "./LedigaJobb";
-import Tjanster from "./Tjanster";
-import kvalitet_Miljo from "./assets/miljö_&_hållbarhet.jpeg";
-import isoCert from "./assets/cc-ISO-merge-3.png";
-import isoCert1 from "./assets/cc-ISO-merge-11.jpg";
-import About from "./About";
-import Offert from "./Offert";
+import { body, logo, nav, linkStyle, navItem, spanContainer, title, subtitle, isoCertContainer, isoCertImageContainer, button, cardContainer, cardTitle, card, cardSubtitle } from "./styles";
+// Bilder
+import logoHome from "../assets/CCS_COLOR.png";
+import kvalitet_Miljo from "../assets/miljö_&_hållbarhet.jpeg";
+import isoCert from "../assets/cc-ISO-merge-3.png";
+import isoCert1 from "../assets/cc-ISO-merge-11.jpg";
+
 
 const KvalitetMiljo = () => {
   return (
@@ -77,7 +72,6 @@ const KvalitetMiljo = () => {
           </div>
           <Link
             to="https://ccservice.se/assets/Certifikat%202020.pdf"
-            element={<Kontakt />}
           >
             <button style={button}>Se våra Certifikat</button>
           </Link>
@@ -134,152 +128,6 @@ const KvalitetMiljo = () => {
       </div>
     </div>
   );
-};
-
-const body = {
-  display: "flex",
-  justifyContent: "space-around",
-  alignItems: "center",
-  flexDirection: "column",
-};
-const topContainer = {
-  display: "flex",
-  justifyContent: "space-between",
-  padding: 20,
-  width: "75%",
-  marginBottom: 20,
-  marginRight: 180,
-  marginLeft: 180,
-};
-
-const topRight = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-};
-
-const logo = {
-  width: 154,
-  height: 181,
-  marginTop: 25,
-  margin: 40,
-};
-
-const title = {
-  fontWeight: "bold",
-  fontFamily: "dosis, sans-serif",
-  color: "#002554",
-  fontSize: 57,
-  fontWeight: 500,
-  marginTop: 40,
-  marginBottom: 20,
-};
-
-const subtitle = {
-  fontSize: 20,
-  cursor: "pointer",
-  fontFamily: "merriweather, sans-serif",
-  color: "#999a9a",
-  maxWidth: 600,
-  letterSpacing: 1,
-  lineHeight: 1.5,
-};
-
-const spanContainer = {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "space-around",
-  width: "75%",
-  marginBottom: 50,
-};
-
-const cardContainer = {
-  display: "flex",
-  alignItems: "center",
-  flexDirection: "row",
-  width: "75%",
-  gap: 20,
-};
-
-const card = {
-  display: "flex",
-  flexDirection: "row",
-  width: "50%",
-  marginBottom: 50,
-  height: 300,
-};
-
-const cardTitle = {
-  fontSize: 25,
-  fontFamily: "dosis, sans-serif",
-  color: "#002554",
-  marginBottom: 20,
-};
-
-const cardSubtitle = {
-  fontSize: 15,
-  fontFamily: "merriweather, sans-serif",
-  color: "#999a9a",
-  letterSpacing: 2,
-  lineHeight: 1.5,
-};
-
-const nav = {
-  display: "flex",
-  justifyContent: "space-around",
-  alignItems: "center",
-  flexDirection: "row",
-  padding: 20,
-  fontFamily: "dosis, sans-serif",
-  color: "#002554",
-  fontSize: 20,
-  fontWeight: 500,
-  width: "79%",
-};
-
-const navItem = {
-  transition: "transform 0.2s ease-in-out",
-  cursor: "default",
-};
-
-const button = {
-  backgroundColor: "#002554",
-  color: "white",
-  width: 200,
-  padding: 10,
-  borderRadius: 5,
-  border: "none",
-  cursor: "pointer",
-  fontSize: 20,
-  fontFamily: "dosis, sans-serif",
-  marginTop: 25,
-  marginBottom: 50,
-  transition: "transform 0.2s ease-in-out",
-  margin: 30,
-};
-
-const isoCertContainer = {
-  display: "flex",
-  flexDirection: "row",
-  alignItems: "center",
-  width: "75%",
-};
-
-const isoCertImageContainer = {
-  display: "flex",
-  flexDirection: "row",
-  justifyContent: "center",
-  alignItems: "center",
-  width: "75%",
-  gap: 5,
-};
-
-const linkStyle = {
-  textDecoration: "none",
-  color: "#002554",
-  fontSize: 20,
-  fontWeight: 500,
-  fontFamily: "dosis, sans-serif",
 };
 
 export default KvalitetMiljo;

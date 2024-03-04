@@ -1,18 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from './Home';
-import Footer from './Footer';
-import Business from './Business';
-import Tjanster from './Tjanster';
-import Kontakt from './Kontakt';
-import Offert from './Offert';
-import Markservice from './Markservice';
-import Referenser from './Referenser';
-import KvalitetMiljo from './KvalitetMiljo';
-import LedigaJobb from './LedigaJobb';
-import About from './About';
-import Privat from './Privat';
-import Intresseanmälan from './Intresseanmälan';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import Home from './Home';
+import Footer from './Footer/Footer';
+import Business from './Business/Business';
+import Tjanster from './Tjanster/Tjanster';
+import Kontakt from './Kontakt/Kontakt';
+import Offert from './Offert/Offert';
+import Markservice from './Markservice/Markservice';
+import Referenser from './Referenser/Referenser';
+import KvalitetMiljo from './Kvalitet&Miljö/KvalitetMiljo';
+import LedigaJobb from './LedigaJobb/LedigaJobb';
+import About from './About/About';
+// import Privat from './Privat';
+// import Intresseanmälan from './Intresseanmälan';
 // import PrisLista from './PrisLista';
 
 
@@ -23,7 +23,7 @@ function App() {
       <Routes>
         {/* <Route path="/" element={<Home />} /> */}
         <Route path="/" element={<Business />} />
-        <Route path="/privat" element={<Privat />} />
+        {/* <Route path="/privat" element={<Privat />} /> */}
         <Route path="/tjanster" element={<Tjanster />} />
         <Route path="/kontakt" element={<Kontakt />} />
         <Route path="/offert" element={<Offert />} />

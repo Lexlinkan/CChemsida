@@ -5,14 +5,14 @@ import logoHome from "./assets/CCS_COLOR.png";
 import varaTjanser from "./assets/vara-tjanster.jpeg";
 import { Link } from "react-router-dom";
 import Kontakt from "./Kontakt";
-import Markservice from "./Markservice";
-import Referenser from "./Referenser";
-import KvalitetMiljo from "./KvalitetMiljo";
-import LedigaJobb from "./LedigaJobb";
-import About from "./About";
-import Tjanster from "./Tjanster";
+import Markservice from "../Markservice";
+import Referenser from "../Referenser";
+import KvalitetMiljo from "../Kvalitet & Miljö/KvalitetMiljo";
+import LedigaJobb from "../LedigaJobb";
+import About from "../About/About";
+import Tjanster from "../Tjanster";
 import intresseImg from "./assets/intresse.jpeg";
-import PrisLista from "./PrisLista";
+import PrisLista from "../PrisLista";
 
 export const Intesseanmälan = () => {
   const form = useRef();

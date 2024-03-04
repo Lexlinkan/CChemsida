@@ -1,25 +1,18 @@
 import React from "react";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import logoHome from "./assets/CCS_COLOR.png";
-import kundIFokus from "./assets/kund_i_fokus.jpeg";
 import { Link } from "react-router-dom";
-import Kontakt from "./Kontakt";
-import Markservice from "./Markservice";
-import Tjanster from "./Tjanster";
-import KvalitetMiljo from "./KvalitetMiljo";
-import LedigaJobb from "./LedigaJobb";
-import About from "./About";
-import Offert from "./Offert";
+import { body, logo, nav, linkStyle, navItem, spanContainer, title, subtitle, cardContainer, cardTitle, card, cardSubtitle, button, iconContainer, icons } from "./styles";
 
-// Bilder till kungloggotyper
-import abbvie from "./assets/abbvie.jpg";
-import claraLogo from "./assets/clara-logo.jpg";
-import hotellSkeppsholmen from "./assets/hotell_skeppsholmen_logo-390x238.jpg";
-import logo20170227182418 from "./assets/logo-20170227182418.png";
-import nobisLogotypjpg2jpeg from "./assets/nobis_logotypjpg2jpeg.jpg";
-import stallmastaregardenLogo from "./assets/stallmastaregarden_logo.gif";
-import einarMattson from "./assets/print-logo.jpg";
-import j from "./assets/200_logo_1330680504.jpg";
+// Bilder 
+import logoHome from "../assets/CCS_COLOR.png";
+import kundIFokus from "../assets/kund_i_fokus.jpeg";
+import abbvie from "../assets/abbvie.jpg";
+import claraLogo from "../assets/clara-logo.jpg";
+import hotellSkeppsholmen from "../assets/hotell_skeppsholmen_logo-390x238.jpg";
+import logo20170227182418 from "../assets/logo-20170227182418.png";
+import nobisLogotypjpg2jpeg from "../assets/nobis_logotypjpg2jpeg.jpg";
+import stallmastaregardenLogo from "../assets/stallmastaregarden_logo.gif";
+import einarMattson from "../assets/print-logo.jpg";
+import j from "../assets/200_logo_1330680504.jpg";
 
 const Referenser = () => {
   return (
@@ -105,153 +98,11 @@ const Referenser = () => {
         <img src={stallmastaregardenLogo} alt="Stallmästargården" />
         <img style={icons} src={einarMattson} alt="Einar & Mattson" />
       </div>
-      <Link to="/kontakt" element={<Kontakt />}>
+      <Link to="/kontakt" >
         <button style={button}>Kontakta Oss</button>
       </Link>
     </div>
   );
-};
-
-const body = {
-  display: "flex",
-  justifyContent: "space-around",
-  alignItems: "center",
-  flexDirection: "column",
-};
-const topContainer = {
-  display: "flex",
-  justifyContent: "space-between",
-  padding: 20,
-  width: "75%",
-  marginBottom: 20,
-};
-
-const topRight = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-};
-
-const logo = {
-  width: 154,
-  height: 181,
-  marginTop: 25,
-  margin: 40,
-};
-
-const title = {
-  fontWeight: "bold",
-  fontFamily: "dosis, sans-serif",
-  color: "#002554",
-  fontSize: 57,
-  fontWeight: 500,
-  marginTop: 40,
-  marginBottom: 20,
-};
-
-const subtitle = {
-  fontSize: 20,
-  cursor: "pointer",
-  fontFamily: "merriweather, sans-serif",
-  color: "#999a9a",
-  maxWidth: 600,
-  letterSpacing: 1,
-  lineHeight: 1.5,
-};
-
-const spanContainer = {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "space-around",
-  padding: 20,
-  width: "75%",
-  marginBottom: 50,
-};
-
-const cardContainer = {
-  display: "flex",
-  alignItems: "center",
-  flexDirection: "row",
-  width: "75%",
-  gap: 20,
-};
-
-const card = {
-  display: "flex",
-  flexDirection: "row",
-  width: "50%",
-  marginBottom: 10,
-  height: 150,
-};
-
-const cardTitle = {
-  fontSize: 25,
-  fontFamily: "dosis, sans-serif",
-  color: "#002554",
-  marginBottom: 20,
-};
-
-const cardSubtitle = {
-  fontSize: 15,
-  fontFamily: "merriweather, sans-serif",
-  color: "#999a9a",
-  letterSpacing: 2,
-};
-
-const nav = {
-  display: "flex",
-  justifyContent: "space-around",
-  alignItems: "center",
-  flexDirection: "row",
-  padding: 20,
-  fontFamily: "dosis, sans-serif",
-  color: "#002554",
-  fontSize: 20,
-  fontWeight: 500,
-  width: "79%",
-};
-
-const navItem = {
-  transition: "transform 0.2s ease-in-out",
-  cursor: "default",
-};
-
-const button = {
-  backgroundColor: "#002554",
-  color: "white",
-  width: 200,
-  padding: 10,
-  borderRadius: 5,
-  border: "none",
-  cursor: "pointer",
-  fontSize: 20,
-  fontFamily: "dosis, sans-serif",
-  marginTop: 50,
-  marginBottom: 50,
-  transition: "transform 0.2s ease-in-out",
-};
-
-const iconContainer = {
-  display: "flex",
-  flexDirection: "row",
-  justifyContent: "space-between",
-  width: "75%",
-  marginBottom: 50,
-  marginTop: 50,
-};
-
-const icons = {
-  width: 190,
-  height: 120,
-  margin: 10,
-};
-
-const linkStyle = {
-  textDecoration: "none",
-  color: "#002554",
-  fontSize: 20,
-  fontWeight: 500,
-  fontFamily: "dosis, sans-serif",
 };
 
 export default Referenser;

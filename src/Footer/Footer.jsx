@@ -1,4 +1,6 @@
 import React from "react";
+import { span, style, hzLine } from "./styles";
+
 
 export const Footer = () => {
   return (
@@ -12,29 +14,6 @@ export const Footer = () => {
       <span style={hzLine}></span>
     </div>
   );
-};
-
-const style = {
-  bottom: 0,
-  left: 0,
-  width: "100%",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "space-around",
-  height: 50,
-  marginTop: 50,
-};
-
-const span = {
-  color: '#999a9a'
-};
-
-const hzLine = {
-  width: 200,
-  height: 1,
-  backgroundColor: '#999a9a',
-  margin: 0,
-  padding: 0,
 };
 
 export default Footer;
