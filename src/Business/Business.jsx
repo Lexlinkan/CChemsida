@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { body, text, textTitle, textSubtitle, logo, nav, navItem, businessImg, overLayF, cardContainer, card, cardTitle, cardSubtitle, imageContainer, buttonStyle, linkStyle } from "./styles";
+import { body, text, textTitle, textSubtitle, logo, nav, navItem, businessImg, overLayF, cardContainer, card, cardTitle, cardSubtitle, buttonStyle, linkStyle } from "./styles";
 // Bilder
 import foretag from "../assets/homePageF.jpeg";
 import logoHome from "../assets/CCS_COLOR.png";
@@ -76,6 +76,16 @@ const Business = () => {
               plats. Men det handlar också om snabb återkoppling vid eventuell
               reklamation.
             </p>
+            <div style={{ position: "relative" }}>
+            <Link to="/referenser">
+              <img
+                style={{ width: 350, height: 300 }}
+                src={kundIFokus}
+                alt=""
+              />
+              <button style={buttonStyle}>Läs Mer</button>
+            </Link>
+          </div>
           </div>
           <div style={card}>
             <span style={cardTitle}>Kvalitet och miljö</span>
@@ -87,29 +97,7 @@ const Business = () => {
               14001:2015, vilket vi är väldigt stolta över. Miljön är vår
               framtid.
             </p>
-          </div>
-          <div style={card}>
-            <span style={cardTitle}>Service som lever upp till dina krav</span>
-            <p style={cardSubtitle}>
-              Våra kompetenta och engagerade medarbetare är de som bidrar till
-              företagets utveckling. Det innebär att vi kan garantera en hög
-              kvalitet och servicegrad. Men för att du ska bli övertygad så kan
-              du givetvis testa oss innan du bestämmer dig!
-            </p>
-          </div>
-        </div>
-        <div style={imageContainer}>
-          <div style={{ position: "relative" }}>
-            <Link to="/referenser">
-              <img
-                style={{ width: 350, height: 300 }}
-                src={kundIFokus}
-                alt=""
-              />
-              <button style={buttonStyle}>Läs Mer</button>
-            </Link>
-          </div>
-          <div style={{ position: "relative" }}>
+            <div style={{ position: "relative" }}>
             <Link to="/kvalitetmiljo">
               <img
                 style={{ width: 350, height: 300 }}
@@ -119,11 +107,21 @@ const Business = () => {
               <button style={buttonStyle}>Läs Mer</button>
             </Link>
           </div>
-          <div style={{ position: "relative" }}>
+          </div>
+          <div style={card}>
+            <span style={cardTitle}>Service som lever upp till dina krav</span>
+            <p style={cardSubtitle}>
+              Våra kompetenta och engagerade medarbetare är de som bidrar till
+              företagets utveckling. Det innebär att vi kan garantera en hög
+              kvalitet och servicegrad. Men för att du ska bli övertygad så kan
+              du givetvis testa oss innan du bestämmer dig!
+            </p>
+            <div style={{ position: "relative" }}>
             <Link to="/tjanster">
               <img style={{ width: 350, height: 300 }} src={offertImg} alt="" />
               <button style={buttonStyle}>Läs Mer</button>
             </Link>
+          </div>
           </div>
         </div>
       </div>
@@ -132,4 +130,3 @@ const Business = () => {
 };
 
 export default Business;
-

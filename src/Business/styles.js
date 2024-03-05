@@ -15,7 +15,7 @@ export const text = {
 
 export const textTitle = {
   fontSize: 45,
-  fontFamily: "dosis, sans-serif", // Updated to Dosis font
+  fontFamily: "dosis, sans-serif",
   color: "#999a9a",
   margin: 15,
   letterSpacing: 1.5,
@@ -23,7 +23,7 @@ export const textTitle = {
 
 export const textSubtitle = {
   fontSize: 45,
-  fontFamily: "dosis, sans-serif", // Updated to Dosis font
+  fontFamily: "dosis, sans-serif",
   color: "#999a9a",
   margin: 15,
   letterSpacing: 1.5,
@@ -40,7 +40,6 @@ export const logo = {
 export const nav = {
   display: "flex",
   justifyContent: "space-around",
-  backgroundColoe: "lightgreen",
   alignItems: "center",
   flexDirection: "row",
   padding: 20,
@@ -71,18 +70,26 @@ export const overLayF = {
   marginBottom: 40,
 };
 
-export const cardContainer = {
-  display: "flex",
-  justifyContent: "space-around",
-  flexDirection: "row",
-  padding: 20,
-  paddintBottom: 0,
-  width: "75%",
-};
+  export const cardContainer = {
+    display: "flex",
+    justifyContent: "space-between",
+    flexDirection: "row",
+    padding: 20,
+    paddingBottom: 0,
+    width: "75%",
+    
+    '@media screen and (maxWidth: 768px)': {
+      flexDirection: "column",
+      alignItems: "center",
+    },
+  };
+  
+
 
 export const card = {
   display: "flex",
   flexDirection: "column",
+  justifyContent: "space-between",
   alignItems: "start",
   width: 350,
 };
@@ -100,15 +107,6 @@ export const cardSubtitle = {
   color: "#999a9a",
   margin: 15,
   letterSpacing: 2,
-};
-
-export const imageContainer = {
-  display: "flex",
-  justifyContent: "space-around",
-  alignItems: "center",
-  flexDirection: "row",
-  width: "75%",
-  marginBottom: 70,
 };
 
 export const buttonStyle = {
@@ -131,42 +129,4 @@ export const linkStyle = {
   fontSize: 20,
   fontWeight: 500,
   fontFamily: "dosis, sans-serif",
-};
-
-// Add media queries for iPads and iPhones
-export const mediaQueries = {
-  "@media (max-width: 1024px)": {
-    container: {
-      flexDirection: "column",
-      alignItems: "center",
-    },
-    cardContainer: {
-      flexDirection: "column",
-    },
-    card: {
-      width: "100%",
-      maxWidth: "none",
-    },
-    imageContainer: {
-      flexDirection: "column",
-    },
-  },
-  "@media (max-width: 768px)": {
-    container: {
-      padding: 10,
-    },
-    cardContainer: {
-      padding: 10,
-      flexDirection: "column",
-    },
-    cardTitle: {
-      fontSize: 20,
-    },
-    cardSubtitle: {
-      fontSize: 12,
-    },
-    imageContainer: {
-      marginBottom: 30,
-    },
-  },
 };
