@@ -1,0 +1,26 @@
+.logo {
+    width: 154px;
+    height: 181px;
+    margin-top: 25px;
+    margin: 40px;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    padding: 20px;
+    font-family: dosis, sans-serif;
+    color: #002554;
+    font-size: 20px;
+    font-weight: 500;
+    width: 78%;
+    text-decoration: none;
+  }
+  
+  .navItem {
+    transition: transform 0.2s ease-in-out;
+    cursor: default;
+    text-decoration: none;
+  }

@@ -1,17 +1,17 @@
 import React from "react";
-import { span, style, hzLine } from "./styles";
+import './footer.css';
 
 
 export const Footer = () => {
   return (
-    <div style={style}>
-      <span style={hzLine}></span>
-      <span style={span}>CC Service AB</span>
-      <span style={span}>Enhagsvägen 18</span>
-      <span style={span}>187 40 Täby</span>
-      <span style={span}>08-506 363 88</span>
-      <span style={span}>info@ccservice.se</span>
-      <span style={hzLine}></span>
+    <div className="style">
+      <span className="hzLine"></span>
+      <span className="span">CC Service AB</span>
+      <span className="span">Enhagsvägen 18</span>
+      <span className="span">187 40 Täby</span>
+      <span className="span">08-506 363 88</span>
+      <span className="span">info@ccservice.se</span>
+      <span className="hzLine"></span>
     </div>
   );
 };

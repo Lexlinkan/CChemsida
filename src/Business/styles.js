@@ -70,21 +70,21 @@ export const overLayF = {
   marginBottom: 40,
 };
 
-  export const cardContainer = {
-    display: "flex",
-    justifyContent: "space-between",
-    flexDirection: "row",
-    padding: 20,
-    paddingBottom: 0,
-    width: "75%",
-    
-    '@media screen and (maxWidth: 768px)': {
-      flexDirection: "column",
-      alignItems: "center",
-    },
-  };
-  
-
+export const cardContainer = {
+  display: "flex",
+  justifyContent: "space-between",
+  flexDirection: "row",
+  padding: 20,
+  paddingBottom: 0,
+  width: "75%",
+  "@media (maxWidth: 1024px)": {
+    flexDirection: "column",
+    alignItems: "center",
+  },
+  "@media (maxWidth: 768px)": {
+    width: "100%",
+  },
+};
 
 export const card = {
   display: "flex",
