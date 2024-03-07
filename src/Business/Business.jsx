@@ -1,58 +1,26 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import "./business.css";
+import Navbar from "../Navbar/Navbar";
+
 // Bilder
 import foretag from "../assets/homePageF.jpeg";
-import logoHome from "../assets/CCS_COLOR.png";
 import kundIFokus from "../assets/kund_i_fokus.jpeg";
 import kvalitetMiljo from "../assets/miljö_&_hållbarhet.jpeg";
 import offertImg from "../assets/offertImg.jpeg";
 import overlayimgF from "../assets/homepageFöretag.png";
 
-import React from "react";
-import { Link } from "react-router-dom";
-import "./business.css";
-
 const Business = () => {
   return (
     <div>
       <div className="body">
-        <Link to="/">
-          <img className="logo" src={logoHome} alt="Logga" />
-        </Link>
-        <div className="nav">
-          <Link className="linkStyle" to="/tjanster">
-            <span className="navItem">VÅRA TJÄNSTER</span>
-          </Link>
-          <Link className="linkStyle" to="/markservice">
-            <span className="navItem">MARKSERVICE</span>
-          </Link>
-          <Link className="linkStyle" to="/referenser">
-            <span className="navItem">REFERENSER</span>
-          </Link>
-          <Link className="linkStyle" to="/kvalitetmiljo">
-            <span className="navItem">KVALITET & MILJÖ</span>
-          </Link>
-          <Link className="linkStyle" to="/offert">
-            <span className="navItem">BEGÄR OFFERT</span>
-          </Link>{" "}
-          <Link className="linkStyle" to="/ledigajobb">
-            <span className="navItem">LEDIGA JOBB</span>
-          </Link>
-          <Link className="linkStyle" to="/omoss">
-            <span className="navItem">OM OSS</span>
-          </Link>
-          <Link className="linkStyle" to="/kontakt">
-            <span className="navItem">KONTAKT</span>
-          </Link>
-        </div>
-
+        <Navbar />
         <div className="businessImgContainer">
-          <Link to="/business" element={<Business />}>
             <img className="businessImg" src={foretag} alt="Business" />
             <div className="overLayF">
               <img className="overLayFImg" src={overlayimgF} alt="Overlay img Business" />
             </div>
-          </Link>
         </div>
-
         <div className="text">
           <span className="textTitle">
             Välkommen till ett städbolag du kan lita på

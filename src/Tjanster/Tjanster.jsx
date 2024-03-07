@@ -1,64 +1,37 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { body, logo, nav, linkStyle, navItem, spanContainer, title, subtitle, cardContainer, cardTitle, card, cardSubtitle, button } from "../Tjanster/styles";
-
+import Navbar from "../Navbar/Navbar";
+import "./tjanster.css";
 // Bilder
-import logoHome from "../assets/CCS_COLOR.png";
-import varaTjanser from "../assets/vara-tjanster.jpeg";
+import varaTjanster from "../assets/vara-tjanster.jpeg";
+import overlayimgF from "../assets/rotatedOverlayImg.png";
+
 
 const Tjanster = () => {
   return (
-    <div style={body}>
-        <Link to="/">
-          <img style={logo} src={logoHome} alt="Logga" />
-        </Link>{" "}
-
-        <div style={nav}>
-          <Link style={linkStyle} to="/tjanster">
-            <span style={navItem}>VÅRA TJÄNSTER</span>
-          </Link>
-          <Link style={linkStyle} to="/markservice">
-            <span style={navItem}>MARKSERVICE</span>
-          </Link>
-          <Link style={linkStyle} to="/referenser">
-            <span style={navItem}>REFERENSER</span>
-          </Link>
-          <Link style={linkStyle} to="/kvalitetmiljo">
-            <span style={navItem}>KVALITET & MILJÖ</span>
-          </Link>
-          <Link style={linkStyle} to="/offert">
-            <span style={navItem}>BEGÄR OFFERT</span>
-          </Link>{" "}
-          <Link style={linkStyle} to="/ledigajobb">
-            <span style={navItem}>LEDIGA JOBB</span>
-          </Link>
-          <Link style={linkStyle} to="/omoss">
-            <span style={navItem}>OM OSS</span>
-          </Link>
-          <Link style={linkStyle} to="/kontakt">
-            <span style={navItem}>KONTAKT</span>
-          </Link>
+    <div className="body">
+      <Navbar />
+      <div className="businessImgContainer">
+            <img className="businessImg" src={varaTjanster} alt="Business" />
+            <div className="overLayF">
+              <img className="overLayFImg" src={overlayimgF} alt="Overlay img Business" />
+            </div>
         </div>
-      <img
-        src={varaTjanser}
-        style={{ width: "75%" }}
-        alt="Våra Tjänster image"
-      />
-      <div style={spanContainer}>
-        <span style={title}>Service som lever upp till dina krav</span>
-        <span style={subtitle}>
+      <div className="spanContainer">
+        <span className="title">Service som lever upp till dina krav</span>
+        <span className="subtitle">
           Våra kompetenta och engagerade medarbetare är de som bidrar till
           företagets utveckling. Det innebär att vi kan garantera en hög
           kvalitet och servicegrad. Men för att du ska bli övertygad så kan du
           givetvis testa oss innan du bestämmer dig!
         </span>
       </div>
-      <div style={cardContainer}>
-        <span style={cardTitle}>VÅRA FÖRETAGSTJÄNSTER</span>
+      <div className="cardContainer">
+        <span className="cardTitle">VÅRA FÖRETAGSTJÄNSTER</span>
       </div>
-      <div style={cardContainer}>
-        <div style={card}>
-          <span style={cardSubtitle}>
+      <div className="cardContainer">
+        <div className="card">
+          <span className="cardSubtitle">
             CC Service är ett lokalvårdsföretag med ett brett utbud av olika
             tjänster. Vi städar både kontor, hotell, trappor, skolor, etc. <p></p> För
             oss är det alltid viktigt att upprätthålla en hög kvalitet och en
@@ -76,8 +49,8 @@ const Tjanster = () => {
             </p>
           </span>
         </div>
-        <div style={card}>
-          <span style={cardSubtitle}>
+        <div className="card">
+        <span className="cardSubtitle">
             Förutom våra ordinarie tjänster erbjuder vi även olika typer av
             specialstädning så som:
             <ul>
@@ -95,7 +68,7 @@ const Tjanster = () => {
         </div>
       </div>
       <Link to="/kontakt">
-        <button style={button}>Kontakta oss</button>
+        <button className="button">Kontakta oss</button>
       </Link>
     </div>
   );

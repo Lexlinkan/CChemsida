@@ -30,33 +30,6 @@
   margin-bottom: 50px;
 }
 
-.logo {
-  width: 154px;
-  height: 181px;
-  margin-top: 25px;
-  margin: 40px;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-  padding: 20px;
-  font-family: dosis, sans-serif;
-  color: #002554;
-  font-size: 20px;
-  font-weight: 500;
-  width: 78%;
-  text-decoration: none;
-}
-
-.navItem {
-  transition: transform 0.2s ease-in-out;
-  cursor: default;
-  text-decoration: none;
-}
-
 .businessImgContainer {
   position: relative;
   display: flex;
@@ -84,61 +57,9 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  padding: 20px;
-  padding-bottom: 0;
+  padding: 40px;
   width: 75%;
-}
-
-@media only screen and (max-width: 820px) {
-  .cardContainer {
-    width: 85%;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .textTitle {
-    display: none;
-  }
-  .textSubtitle {
-    display: none;
-  }
-}
-@media only screen and (max-width: 1024px) {
-  .body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-    .cardContainer {
-    width: 85%;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    justify-content: center;
-
-  }
-  .textTitle {
-    align-items: center;
-    justify-content: center;
-  }
-  .textSubtitle {
-    align-items: center;
-    justify-content: center;
-  }
+  height: 600px;
 }
 
 .card {
@@ -146,7 +67,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
-  width: 350px;
 }
 
 .cardImage {
@@ -170,6 +90,10 @@
   letter-spacing: 2px;
 }
 
+.cardLinkContainer {
+  position: relative;
+}
+
 .buttonStyle {
   position: absolute;
   top: 5px;
@@ -191,3 +115,4 @@
   font-weight: 500;
   font-family: dosis, sans-serif;
 }
+

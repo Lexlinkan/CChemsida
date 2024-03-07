@@ -1,0 +1,139 @@
+.body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.businessImgContainer {
+  position: relative;
+  display: flex;
+}
+
+.businessImg {
+  width: 75vw;
+  margin-bottom: 40;
+}
+
+.overLayF {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 0px;
+  margin-bottom: 51px;
+  width: 100%;
+}
+
+.overLayFImg {
+  width: 40%;
+}
+
+.title {
+  font-weight: bold;
+  font-family: dosis, sans-serif;
+  color: #002554;
+  font-size: 57px;
+  font-weight: 500;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 20px;
+  cursor: pointer;
+  font-family: merriweather, sans-serif;
+  color: #999a9a;
+  max-width: 600px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.spanContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+  width: 75%;
+  margin-bottom: 50px;
+}
+
+.cardContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 75%;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+/* .card {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-bottom: 10px;
+  height: 300px;
+} */
+
+.cardTitle {
+  font-size: 25px;
+  font-family: dosis, sans-serif;
+  color: #002554;
+  margin-bottom: 20px;
+}
+
+.cardSubtitle {
+  font-size: 15px;
+  font-family: merriweather, sans-serif;
+  color: #999a9a;
+  letter-spacing: 2px;
+}
+
+.button {
+  background-color: #002554;
+  color: white;
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: dosis, sans-serif;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* @media only screen and (max-width: 1024px) {
+    .body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+      .cardContainer {
+      width: 85%;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      justify-content: center;
+  
+    }
+    .textTitle {
+      align-items: center;
+      justify-content: center;
+    }
+    .textSubtitle {
+      align-items: center;
+      justify-content: center;
+    }
+    .card {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+   */
