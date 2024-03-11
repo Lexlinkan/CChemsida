@@ -11,6 +11,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 15px;
 }
 
 .textTitle {
@@ -28,6 +29,7 @@
   margin: 15px;
   letter-spacing: 1.5px;
   margin-bottom: 50px;
+  align-items: center;
 }
 
 .businessImgContainer {
@@ -51,22 +53,24 @@
 .overLayFImg {
   border-radius: 5px;
   width: 50%;
+  margin-bottom: -3px;
 }
 
 .cardContainer {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  padding: 40px;
+  padding: 20px;
   width: 75%;
-  height: 600px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: start;
+  width: 350px;
+  margin: 15px;
 }
 
 .cardImage {
@@ -79,15 +83,14 @@
   font-size: 25px;
   font-family: dosis, sans-serif;
   color: #002554;
-  margin: 15px;
 }
 
 .cardSubtitle {
   font-size: 15px;
   font-family: Merriweather, serif;
   color: #999a9a;
-  margin: 15px;
   letter-spacing: 2px;
+  line-height: 1.5;
 }
 
 .cardLinkContainer {
@@ -116,3 +119,62 @@
   font-family: dosis, sans-serif;
 }
 
+@media only screen and (max-width: 820px) {
+  .cardContainer {
+    width: 85%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .textTitle {
+    display: none;
+  }
+  .textSubtitle {
+    display: none;
+  }
+  .card {
+    width: 500px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    .cardContainer {
+    width: 85%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+  .textTitle {
+    align-items: center;
+    justify-content: center;
+  }
+  .textSubtitle {
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+  }
+}

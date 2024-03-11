@@ -1,4 +1,4 @@
-.body {
+/* .body {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -50,8 +50,8 @@
 
 .spanContainer {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  /* flex-direction: column; */
+  /* justify-content: space-around;
   padding: 20px;
   width: 75%;
   margin-bottom: 50px;
@@ -66,13 +66,13 @@
   margin-bottom: 50px;
 }
 
-/* .card {
+.card {
   display: flex;
   flex-direction: column;
   width: 50%;
   margin-bottom: 10px;
   height: 300px;
-} */
+}
 
 .cardTitle {
   font-size: 25px;
@@ -100,7 +100,7 @@
   font-family: dosis, sans-serif;
   margin-top: 50px;
   margin-bottom: 50px;
-}
+} */ 
 
 /* @media only screen and (max-width: 1024px) {
     .body {
