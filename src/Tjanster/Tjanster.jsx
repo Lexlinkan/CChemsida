@@ -9,29 +9,29 @@ import overlayimgF from "../assets/rotatedOverlayImg.png";
 
 const Tjanster = () => {
   return (
-    <div className="body">
+    <div className="bodyTjanster">
       <Navbar />
-      <div className="businessImgContainer">
-            <img className="businessImg" src={varaTjanster} alt="Business" />
-            <div className="overLayF">
-              <img className="overLayFImg" src={overlayimgF} alt="Overlay img Business" />
+      <div className="businessImgContainerTjanster">
+            <img className="businessImgTjanster" src={varaTjanster} alt="Business" />
+            <div className="overLayFTjanster">
+              <img className="overLayFImgTjanster" src={overlayimgF} alt="Overlay img Business" />
             </div>
         </div>
-      <div className="spanContainer">
-        <span className="title">Service som lever upp till dina krav</span>
-        <span className="subtitle">
+      <div className="spanContainerTjanster">
+        <span className="titleTjanster">Service som lever upp till dina krav</span>
+        <span className="subtitleTjanster">
           Våra kompetenta och engagerade medarbetare är de som bidrar till
           företagets utveckling. Det innebär att vi kan garantera en hög
           kvalitet och servicegrad. Men för att du ska bli övertygad så kan du
           givetvis testa oss innan du bestämmer dig!
         </span>
       </div>
-      <div className="cardContainer">
+      <div className="cardContainerTjanster">
         <span className="cardTitle">VÅRA FÖRETAGSTJÄNSTER</span>
       </div>
-      <div className="cardContainer">
-        <div className="card">
-          <span className="cardSubtitle">
+      <div className="cardContainerTjanster">
+        <div className="cardTjanster">
+          <span className="cardSubtitleTjanster">
             CC Service är ett lokalvårdsföretag med ett brett utbud av olika
             tjänster. Vi städar både kontor, hotell, trappor, skolor, etc. <p></p> För
             oss är det alltid viktigt att upprätthålla en hög kvalitet och en
@@ -49,8 +49,8 @@ const Tjanster = () => {
             </p>
           </span>
         </div>
-        <div className="card">
-        <span className="cardSubtitle">
+        <div className="cardTjanster">
+        <span className="cardSubtitleTjanster">
             Förutom våra ordinarie tjänster erbjuder vi även olika typer av
             specialstädning så som:
             <ul>
@@ -68,7 +68,7 @@ const Tjanster = () => {
         </div>
       </div>
       <Link to="/kontakt">
-        <button className="button">Kontakta oss</button>
+        <button className="buttonTjanster">Kontakta oss</button>
       </Link>
     </div>
   );

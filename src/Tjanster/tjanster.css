@@ -1,21 +1,21 @@
-/* .body {
+.bodyTjanster {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
 }
 
-.businessImgContainer {
+.businessImgContainerTjanster {
   position: relative;
   display: flex;
 }
 
-.businessImg {
+.businessImgTjanster {
   width: 75vw;
-  margin-bottom: 40;
+  margin-bottom: 40px; /* Fixed missing unit */
 }
 
-.overLayF {
+.overLayFTjanster {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -24,11 +24,12 @@
   width: 100%;
 }
 
-.overLayFImg {
+.overLayFImgTjanster {
   width: 40%;
+  margin-bottom: 39px;
 }
 
-.title {
+.titleTjanster {
   font-weight: bold;
   font-family: dosis, sans-serif;
   color: #002554;
@@ -38,7 +39,7 @@
   margin-bottom: 20px;
 }
 
-.subtitle {
+.subtitleTjanster {
   font-size: 20px;
   cursor: pointer;
   font-family: merriweather, sans-serif;
@@ -48,16 +49,16 @@
   line-height: 1.5;
 }
 
-.spanContainer {
+.spanContainerTjanster {
   display: flex;
-  /* flex-direction: column; */
-  /* justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-around;
   padding: 20px;
   width: 75%;
   margin-bottom: 50px;
 }
 
-.cardContainer {
+.cardContainerTjanster {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -66,29 +67,33 @@
   margin-bottom: 50px;
 }
 
-.card {
+.cardTjanster {
   display: flex;
   flex-direction: column;
   width: 50%;
   margin-bottom: 10px;
-  height: 300px;
+  height: auto;
+  max-height: 300px;
+  overflow-y: auto;
 }
 
-.cardTitle {
+.cardTitleTjanster {
   font-size: 25px;
   font-family: dosis, sans-serif;
   color: #002554;
   margin-bottom: 20px;
 }
 
-.cardSubtitle {
+.cardSubtitleTjanster {
   font-size: 15px;
   font-family: merriweather, sans-serif;
   color: #999a9a;
   letter-spacing: 2px;
+  margin-bottom: 10px;
+  overflow-y: auto;
 }
 
-.button {
+.buttonTjanster {
   background-color: #002554;
   color: white;
   width: 200px;
@@ -100,40 +105,45 @@
   font-family: dosis, sans-serif;
   margin-top: 50px;
   margin-bottom: 50px;
-} */ 
+} 
 
-/* @media only screen and (max-width: 1024px) {
-    .body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-      .cardContainer {
-      width: 85%;
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .text {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      justify-content: center;
-  
-    }
-    .textTitle {
-      align-items: center;
-      justify-content: center;
-    }
-    .textSubtitle {
-      align-items: center;
-      justify-content: center;
-    }
-    .card {
-      flex-direction: column;
-      text-align: center;
-    }
+@media only screen and (max-width: 820px) {
+  .cardContainerTjanster {
+    width: 85%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
-   */
+  .cardTjanster {
+    width: 100%;
+    margin-bottom: 20px;
+    max-height: none;
+    overflow-y: visible;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .bodyTjanster {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .cardContainerTjanster {
+    width: 85%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .cardTjanster {
+    width: 85%;
+    margin-bottom: 20px;
+    max-height: none;
+    overflow-y: visible;
+  }
+  .overLayFImgTjanster {
+    margin-bottom: -3px;
+  }
+}
