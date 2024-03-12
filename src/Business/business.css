@@ -39,7 +39,7 @@
 
 .businessImg {
   width: 75vw;
-  margin-bottom: 40;
+  margin-bottom: -10px;
 }
 
 .overLayF {
@@ -141,6 +141,15 @@
   }
   .card {
     width: 500px;
+  }
+  .businessImg {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .overLayF {
+    width: 100%;
   }
 }
 @media only screen and (max-width: 1024px) {

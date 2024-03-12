@@ -1,0 +1,104 @@
+.bodyRef {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .titleRef {
+    font-weight: bold;
+    font-family: dosis, sans-serif;
+    color: #002554;
+    font-size: 57px;
+    font-weight: 500;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .subtitleRef {
+    font-size: 20px;
+    cursor: pointer;
+    font-family: merriweather, sans-serif;
+    color: #999a9a;
+    max-width: 600px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+  }
+  
+  .spanContainerRef {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    width: 75%;
+    margin-bottom: 50px;
+  }
+  
+  .cardContainerRef {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 75%;
+    gap: 20px;
+  }
+  
+  .cardRef {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin-bottom: 10px;
+    height: 150px;
+  }
+  
+  .cardTitleRef {
+    font-size: 25px;
+    font-family: dosis, sans-serif;
+    color: #002554;
+    margin-bottom: 20px;
+  }
+  
+  .cardSubtitleRef {
+    font-size: 15px;
+    font-family: merriweather, sans-serif;
+    color: #999a9a;
+    letter-spacing: 2px;
+  }
+  
+  .buttonRef {
+    background-color: #002554;
+    color: white;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: dosis, sans-serif;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .iconContainerRef {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 75%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+  
+  .iconsRef {
+    width: 190px;
+    height: 120px;
+    margin: 10px;
+  }
+  
+  .linkStyleRef {
+    text-decoration: none;
+    color: #002554;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: dosis, sans-serif;
+  }
+  

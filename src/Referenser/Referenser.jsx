@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { body, logo, nav, linkStyle, navItem, spanContainer, title, subtitle, cardContainer, cardTitle, card, cardSubtitle, button, iconContainer, icons } from "./styles";
+import Navbar from "../Navbar/Navbar";
+import './referenser.css';
 
-// Bilder 
-import logoHome from "../assets/CCS_COLOR.png";
+// Bilder
 import kundIFokus from "../assets/kund_i_fokus.jpeg";
 import abbvie from "../assets/abbvie.jpg";
 import claraLogo from "../assets/clara-logo.jpg";
@@ -16,55 +16,27 @@ import j from "../assets/200_logo_1330680504.jpg";
 
 const Referenser = () => {
   return (
-    <div style={body}>
-      <Link to="/">
-        <img style={logo} src={logoHome} alt="Logga" />
-      </Link>{" "}
-      <div style={nav}>
-        <Link style={linkStyle} to="/tjanster">
-          <span style={navItem}>VÅRA TJÄNSTER</span>
-        </Link>
-        <Link style={linkStyle} to="/markservice">
-          <span style={navItem}>MARKSERVICE</span>
-        </Link>
-        <Link style={linkStyle} to="/referenser">
-          <span style={navItem}>REFERENSER</span>
-        </Link>
-        <Link style={linkStyle} to="/kvalitetmiljo">
-          <span style={navItem}>KVALITET & MILJÖ</span>
-        </Link>
-        <Link style={linkStyle} to="/offert">
-          <span style={navItem}>BEGÄR OFFERT</span>
-        </Link>{" "}
-        <Link style={linkStyle} to="/ledigajobb">
-          <span style={navItem}>LEDIGA JOBB</span>
-        </Link>
-        <Link style={linkStyle} to="/omoss">
-          <span style={navItem}>OM OSS</span>
-        </Link>
-        <Link style={linkStyle} to="/kontakt">
-          <span style={navItem}>KONTAKT</span>
-        </Link>
-      </div>
+    <div className="bodyRef">
+      <Navbar />
       <img
         src={kundIFokus}
         style={{ width: "75%" }}
         alt="Våra Tjänster image"
       />
-      <div style={spanContainer}>
-        <span style={title}>Kunden i fokus</span>
-        <span style={subtitle}>
+      <div className="spanContainerRef">
+        <span className="titleRef">Kunden i fokus</span>
+        <span className="subtitleRef">
           Hög tillgänglighet och flexibilitet är viktiga faktorer i vårt dagliga
           arbete. Även med mycket kort varsel kan vi snabbt vara på plats. Men
           det handlar också om snabb återkoppling vid eventuell reklamation.
         </span>
       </div>
-      <div style={cardContainer}>
-        <span style={cardTitle}>ARBETSSÄTT OCH VÄRDERINGAR</span>
+      <div className="cardContainerRef">
+        <span className="cardTitleRef">ARBETSSÄTT OCH VÄRDERINGAR</span>
       </div>
-      <div style={cardContainer}>
-        <div style={card}>
-          <span style={cardSubtitle}>
+      <div className="cardContainerRef">
+        <div className="cardRef">
+          <span className="cardSubtitleRef">
             Vi vill att våra kunder ska kunna lita på oss. Vår höga
             leveranssäkerhet och kvalitetssäkring har gjort att vi byggt upp ett
             bra nät av kundreferenser. Vi arbetar med ständiga förbättringar
@@ -73,8 +45,8 @@ const Referenser = () => {
             vara en avgörande orsak till varför kunderna väljer oss.
           </span>
         </div>
-        <div style={card}>
-          <span style={cardSubtitle}>
+        <div className="cardRef">
+          <span className="cardSubtitleRef">
             Vi vill ha en öppen information för att tydligt förmedla en trygg
             och ärlig samarbetspartner. Nedan kan ni se några av de kunder som
             vi jobbar med. Har ni några specifika önskemål så ta gärna kontakt
@@ -84,22 +56,22 @@ const Referenser = () => {
         </div>
       </div>
       <div>
-        <span style={cardTitle}>NÅGRA FÖRETAG SOM VI JOBBAR MED</span>
+        <span className="cardTitleRef">NÅGRA FÖRETAG SOM VI JOBBAR MED</span>
       </div>
-      <div style={iconContainer}>
-        <img style={icons} src={j} alt="J" />
-        <img style={icons} src={abbvie} alt="Abbvie" />
-        <img style={icons} src={claraLogo} alt="Miss Clara" />
-        <img style={icons} src={hotellSkeppsholmen} alt="Skeppsholmen" />
+      <div className="iconContainerRef">
+        <img className="iconsRef" src={j} alt="J" />
+        <img className="iconsRef" src={abbvie} alt="Abbvie" />
+        <img className="iconsRef" src={claraLogo} alt="Miss Clara" />
+        <img className="iconsRef" src={hotellSkeppsholmen} alt="Skeppsholmen" />
       </div>
-      <div style={iconContainer}>
-        <img style={icons} src={logo20170227182418} alt="Operakällaren" />
-        <img style={icons} src={nobisLogotypjpg2jpeg} alt="Nobis" />
-        <img src={stallmastaregardenLogo} alt="Stallmästargården" />
-        <img style={icons} src={einarMattson} alt="Einar & Mattson" />
+      <div className="iconContainerRef">
+        <img className="iconsRef" src={logo20170227182418} alt="Operakällaren" />
+        <img className="iconsRef" src={nobisLogotypjpg2jpeg} alt="Nobis" />
+        <img className="iconsRef" src={stallmastaregardenLogo} alt="Stallmästargården" />
+        <img className="iconsRef" src={einarMattson} alt="Einar & Mattson" />
       </div>
-      <Link to="/kontakt" >
-        <button style={button}>Kontakta Oss</button>
+      <Link to="/kontakt">
+        <button className="buttonRef">Kontakta Oss</button>
       </Link>
     </div>
   );

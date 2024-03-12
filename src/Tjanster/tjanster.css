@@ -12,7 +12,7 @@
 
 .businessImgTjanster {
   width: 75vw;
-  margin-bottom: 40px; /* Fixed missing unit */
+  margin-bottom: 20px; /* Fixed missing unit */
 }
 
 .overLayFTjanster {
@@ -105,7 +105,7 @@
   font-family: dosis, sans-serif;
   margin-top: 50px;
   margin-bottom: 50px;
-} 
+}
 
 @media only screen and (max-width: 820px) {
   .cardContainerTjanster {
@@ -120,6 +120,12 @@
     margin-bottom: 20px;
     max-height: none;
     overflow-y: visible;
+  }
+  .titleTjanster {
+    font-size: 40px;
+  }
+  .overLayFImgTjanster {
+    margin-bottom: -3px;
   }
 }
 
@@ -143,7 +149,17 @@
     max-height: none;
     overflow-y: visible;
   }
+  .businessImgContainerTjanster {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
   .overLayFImgTjanster {
-    margin-bottom: -3px;
+    margin-bottom: -50px;
+    margin-left: 28px;
+  }
+  .businessImgTjanster {
+    width: 85%;
   }
 }
