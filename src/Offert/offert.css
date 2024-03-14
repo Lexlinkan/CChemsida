@@ -1,0 +1,165 @@
+.bodyOffert {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titleOffert {
+  font-weight: bold;
+  font-family: dosis, sans-serif;
+  color: #002554;
+  font-size: 57px;
+  font-weight: 500;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.subtitleOffert {
+  font-size: 20px;
+  cursor: pointer;
+  font-family: merriweather, sans-serif;
+  color: #999a9a;
+  max-width: 600px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.spanContainerOffert {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+  width: 75%;
+  margin-bottom: 30px;
+}
+
+.cardContainerOffert {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 75%;
+  gap: 20px;
+}
+
+.cardOffert {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+  margin-bottom: 10px;
+  height: 40px;
+}
+
+.cardCommentOffert {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+  margin-bottom: 10px;
+  height: 150px;
+}
+
+.cardSubtitleOffert {
+  font-size: 15px;
+  font-family: merriweather, sans-serif;
+  color: #999a9a;
+  letter-spacing: 2px;
+}
+
+.buttonOffert {
+  background-color: #002554;
+  color: white;
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: dosis, sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.linkStyleOffert {
+  text-decoration: none;
+  color: #002554;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: dosis, sans-serif;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+@media only screen and (max-width: 820px) {
+  .bodyOffert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .cardContainerOffert {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .titleOffert {
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .bodyOffert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .cardContainerOffert {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .cardOffert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 260px;
+    margin-bottom: 20px;
+  }
+  .cardCommentOffert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 260px;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .titleOffert {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .form {
+    width: 90%;
+    max-width: 300px; 
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    align-items: center;
+  }
+    .form label {
+    margin-bottom: 10px;
+  }
+}
