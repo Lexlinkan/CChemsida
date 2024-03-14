@@ -1,54 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { body, logo, nav, linkStyle, navItem, spanContainer, title, subtitle, isoCertContainer, isoCertImageContainer, button, cardContainer, cardTitle, card, cardSubtitle } from "./styles";
+import Navbar from "../Navbar/Navbar";
+import "./kvalitetMiljo.css";
+
 // Bilder
-import logoHome from "../assets/CCS_COLOR.png";
 import kvalitet_Miljo from "../assets/miljö_&_hållbarhet.jpeg";
 import isoCert from "../assets/cc-ISO-merge-3.png";
 import isoCert1 from "../assets/cc-ISO-merge-11.jpg";
 
-
 const KvalitetMiljo = () => {
   return (
-    <div style={body}>
-      <Link to="/">
-        <img style={logo} src={logoHome} alt="Logga" />
-      </Link>{" "}
-      <div style={nav}>
-        <Link style={linkStyle} to="/tjanster">
-          <span style={navItem}>VÅRA TJÄNSTER</span>
-        </Link>
-        <Link style={linkStyle} to="/markservice">
-          <span style={navItem}>MARKSERVICE</span>
-        </Link>
-        <Link style={linkStyle} to="/referenser">
-          <span style={navItem}>REFERENSER</span>
-        </Link>
-        <Link style={linkStyle} to="/kvalitetmiljo">
-          <span style={navItem}>KVALITET & MILJÖ</span>
-        </Link>
-        <Link style={linkStyle} to="/offert">
-          <span style={navItem}>BEGÄR OFFERT</span>
-        </Link>{" "}
-        <Link style={linkStyle} to="/ledigajobb">
-          <span style={navItem}>LEDIGA JOBB</span>
-        </Link>
-        <Link style={linkStyle} to="/omoss">
-          <span style={navItem}>OM OSS</span>
-        </Link>
-        <Link style={linkStyle} to="/kontakt">
-          <span style={navItem}>KONTAKT</span>
-        </Link>
-      </div>
+    <div className="bodyKM">
+      <Navbar />
       <img
         src={kvalitet_Miljo}
         style={{ width: "75%" }}
         alt="Våra Tjänster image"
       />
-      <div style={isoCertContainer}>
-        <div style={spanContainer}>
-          <span style={title}>Miljö och hållbarhet i fokus</span>
-          <span style={subtitle}>
+      <div className="isoCertContainerKM">
+        <div className="spanContainerKM">
+          <span className="titleKM">Miljö och hållbarhet i fokus</span>
+          <span className="subtitleKM">
             Vår affärsidé är att utföra miljöanpassad lokalvård och andra
             servicetjänster med hög kvalitet och med ett professionellt
             kundbemötande. Ett miljömedvetet tänk är ständigt närvarande i vårt
@@ -57,32 +29,30 @@ const KvalitetMiljo = () => {
             är vår framtid.
           </span>
         </div>
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={isoCertImageContainer}>
+        <div className="isoImage">
+          <div className="isoCertImageContainerKM">
             <img
-              style={{ height: 150, width: 250 }}
+              className="isoImage"
               src={isoCert}
               alt="ISO Certificat image"
             />
             <img
-              style={{ height: 150, width: 250 }}
+              className="isoImage"
               src={isoCert1}
               alt="ISO Certificat image1"
             />
           </div>
-          <Link
-            to="https://ccservice.se/assets/Certifikat%202020.pdf"
-          >
-            <button style={button}>Se våra Certifikat</button>
+          <Link to="https://ccservice.se/assets/Certifikat%202020.pdf">
+            <button className="buttonKM">Se våra Certifikat</button>
           </Link>
         </div>
       </div>
-      <div style={cardContainer}>
-        <span style={cardTitle}>VÅRT KVALITETS- OCH MILJÖARBETE</span>
+      <div className="cardContainerKM">
+        <span className="cardTitleKM">VÅRT KVALITETS- OCH MILJÖARBETE</span>
       </div>
-      <div style={cardContainer}>
-        <div style={card}>
-          <span style={cardSubtitle}>
+      <div className="cardContainerKM">
+        <div className="cardKM">
+          <span className="cardSubtitleKM">
             ISO 9001:2015 är världens mest etablerade ramverk för kvalitet.
             Certifikatet garanterar att vi erbjuder en produkt som uppfyller
             myndighetskrav och att vi arbetar för en ökad kundtillfredsställelse
@@ -107,16 +77,18 @@ const KvalitetMiljo = () => {
             </p>
           </span>
         </div>
-        <div style={card}>
-          <span style={cardSubtitle}>
+        <div className="cardKM1">
+          <span className="cardSubtitleKM">
             I en så pass tuff bransch som lokalvård är arbetsmiljön extra viktig
             att ta hänsyn till. På CC Service genomför vi åtgärder för att
             förebygga ohälsa och olycksfall. Vi utbildar även vår personal om
             risker och förebyggande av arbetsskador, kemiska hälsorisker m.m.
-            Detta innebär att vi kan hålla en hög kvalitet och skapa motivation
-            som leder till bra samarbeten. En gemensam hög servicegrad bland
-            alla anställda är också en del som vi prioriterar och kontinuerligt
-            kontrollerar att vi följer.
+            <p>
+              Detta innebär att vi kan hålla en hög kvalitet och skapa
+              motivation som leder till bra samarbeten. En gemensam hög
+              servicegrad bland alla anställda är också en del som vi
+              prioriterar och kontinuerligt kontrollerar att vi följer.
+            </p>
             <p>
               I vår etikpolicy har vi fastställt att vi ska ta ett
               samhällsansvar, att bry oss om vår omvärld, respektera mänskliga
