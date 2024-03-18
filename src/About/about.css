@@ -30,7 +30,7 @@
   flex-direction: column;
   justify-content: space-around;
   padding: 20px;
-  width: 75%;
+  width: 85%;
   margin-bottom: 20px;
 }
 
@@ -38,7 +38,7 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  width: 75%;
+  width: 85%;
   gap: 20px;
 }
 
@@ -100,7 +100,7 @@
 
   .subtitleAbout {
     font-size: 20px;
-    max-width: 350px;
+    max-width: 85%;
     margin-bottom: 25px;
   }
 
@@ -139,7 +139,7 @@
 
   .subtitleAbout {
     font-size: 20px;
-    max-width: 350px;
+    max-width: 85%;
     margin-bottom: 25px;
   }
 
@@ -150,7 +150,7 @@
   }
 
   .cardContainerAbout {
-    width: 95%;
+    width: 85%;
   }
 
   .cardAbout {
@@ -173,7 +173,7 @@
 
   .subtitleAbout {
     font-size: 20px;
-    max-width: 300px;
+    max-width: 85%;
     margin-bottom: 25px;
   }
 
@@ -203,5 +203,6 @@
     width: 100%;
     margin-bottom: 25px;
     margin-top: 150px;
+    margin-bottom: 150px;
   }
 }
