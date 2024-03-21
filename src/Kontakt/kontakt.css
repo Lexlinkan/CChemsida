@@ -1,92 +1,91 @@
 .bodyKontakt {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.titleKontakt {
+  font-weight: bold;
+  font-family: "dosis", sans-serif;
+  color: #002554;
+  font-size: 57px;
+  font-weight: 500;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.subtitleKontakt {
+  font-size: 20px;
+  cursor: pointer;
+  font-family: "merriweather, sans-serif";
+  color: #999a9a;
+  max-width: 600px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.spanContainerKontakt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+  width: 75%;
+}
+
+.underSpanContainerKontakt {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 75%;
+}
+
+.cardTitleKontakt {
+  font-size: 25px;
+  font-family: "dosis, sans-serif";
+  color: #002554;
+}
+
+.cardSubtitleKontakt {
+  font-size: 15px;
+  font-family: "Merriweather, sans-serif";
+  color: #999a9a;
+  letter-spacing: 2px;
+}
+
+.buttonKontakt {
+  background-color: #002554;
+  color: white;
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: "dosis, sans-serif";
+  margin-top: 50px;
+  margin-bottom: 150px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.linkStyleKontakt {
+  text-decoration: none;
+  color: #002554;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "dosis, sans-serif";
+}
+
+@media only screen and (max-width: 1024px) {
+  .bodyKontakt {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
   }
-  
   .titleKontakt {
-    font-weight: bold;
-    font-family: 'dosis', sans-serif;
-    color: #002554;
-    font-size: 57px;
-    font-weight: 500;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    font-size: 40px;
   }
-  
-  .subtitleKontakt {
-    font-size: 20px;
-    cursor: pointer;
-    font-family: 'merriweather, sans-serif';
-    color: #999a9a;
-    max-width: 600px;
-    letter-spacing: 1px;
-    line-height: 1.5;
-  }
-  
-  .spanContainerKontakt {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 20px;
-    width: 75%;
-  }
-  
-  .underSpanContainerKontakt {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    width: 75%;
-  }
-  
-  .cardTitleKontakt {
-    font-size: 25px;
-    font-family: 'dosis, sans-serif';
-    color: #002554;
-  }
-  
-  .cardSubtitleKontakt {
-    font-size: 15px;
-    font-family: 'Merriweather, sans-serif';
-    color: #999a9a;
-    letter-spacing: 2px;
-  }
-  
-  .buttonKontakt {
-    background-color: #002554;
-    color: white;
-    width: 200px;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-    font-family: 'dosis, sans-serif';
-    margin-top: 50px;
-    margin-bottom: 150px;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .linkStyleKontakt {
-    text-decoration: none;
-    color: #002554;
-    font-size: 20px;
-    font-weight: 500;
-    font-family: 'dosis, sans-serif';
-  }
-
-  @media only screen and (max-width: 1024px) {
-    .bodyKontakt {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-direction: column;
-      width: 100%;
-    }
-    .titleKontakt {
-      font-size: 40px;
-    }
-  }
-  
+}

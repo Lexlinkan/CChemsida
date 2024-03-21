@@ -13,7 +13,7 @@ const Kontakt = () => {
     <div className="bodyKontakt">
       <Navbar />
 
-      <img src={kontaktImg} style={{ width: "80%" }} alt="Kontakt image" />
+      <img src={kontaktImg} style={{ width: "75%" }} alt="Kontakt image" />
       <div className="spanContainerKontakt">
         <span className="titleKontakt">Kontakta oss</span>
         <span className="subtitleKontakt">

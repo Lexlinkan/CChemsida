@@ -1,44 +1,114 @@
-.navcontainer {
-    width: 101%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-}
+/* navbar.css */
 
 .logo {
-    width: 154px;
-    height: 181px;
-    margin-top: 25px;
-    margin: 40px;
-    display: flex;
-    justify-content: center;    
-    align-items: center;
-  }
-  
-  .nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    padding: 20px;
-    font-family: dosis, sans-serif;
-    color: #002554;
-    font-size: 20px;
-    font-weight: 500;
-    width: 78%;
-    text-decoration: none;
-  }
-  
-  .navItem {
-    transition: transform 0.2s ease-in-out;
-    cursor: default;
-    text-decoration: none;
+  width: 120px;
+  margin-bottom: 25px;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px; /* Add margin to create space between logo and burger menu */
+}
+
+.navBody {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+}
+
+/* .navLinkContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+} */
+
+.navcontainer {
+  display: flex;
+  flex-direction: column; /* Stack logo and navigation elements vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  margin: auto; /* Center the navcontainer horizontally */
+}
+
+.navbarElements {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Make burger menu and logo occupy full width */
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 89%;
+}
+
+.linkStyle {
+  margin-bottom: 20px;
+}
+
+.burgerMenu {
+  display: none; /* Hide burger menu icon by default */
+}
+
+@media screen and (max-width: 1400px) {
+  .burgerMenu {
+    display: block;
   }
 
-  @media only screen and (max-width: 1024px) {
-    .navcontainer {
-      display: flex;
-      flex-direction: row;
-    }
+  .navBody {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
+
+  .navcontainer {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    position: absolute;
+    width: 200px;
+    height: 20vh;
+    padding: 20px;
+  }
+
+  /* .navLinkContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 0;
+  } */
+
+  .nav.open {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .burgerMenu {
+    width: 50%; /* Adjust width as needed */
+    text-align: center; /* Center the burger menu icon */
+  }
+  .navbarElements {
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+    width: 40px;
+  }
+}
