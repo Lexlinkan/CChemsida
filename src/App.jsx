@@ -31,8 +31,7 @@ function App() {
         <Route path="/referenser" element={<Referenser />} />
         <Route path="/kvalitetmiljo" element={<KvalitetMiljo />} />
         <Route path="/ledigajobb" element={<LedigaJobb />} />
-        <Route path="/omoss" element={<About />} />
-        <Route path="/offert" element={<Offert />} />
+        <Route path="/about" element={<About />} />
         {/* <Route path="/intresseanmalan" element={<Intresseanmälan />} /> */}
         {/* <Route path="/prislista" element={<PrisLista />} /> */}
       </Routes>

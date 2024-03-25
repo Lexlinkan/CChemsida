@@ -13,9 +13,6 @@ const Tjanster = () => {
       <Navbar />
       <div className="businessImgContainerTjanster">
             <img className="businessImgTjanster" src={varaTjanster} alt="Business" />
-            <div className="overLayFTjanster">
-              <img className="overLayFImgTjanster" src={overlayimgF} alt="Overlay img Business" />
-            </div>
         </div>
       <div className="spanContainerTjanster">
         <span className="titleTjanster">Service som lever upp till dina krav</span>

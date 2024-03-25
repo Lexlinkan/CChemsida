@@ -20,6 +20,7 @@ const About = () => {
           vara en attraktiv arbetsgivare och ett företag med god etik.
         </span>
       </div>
+
       <div className="cardContainerAbout">
         <div className="cardAbout">
           <span className="cardTitleAbout">

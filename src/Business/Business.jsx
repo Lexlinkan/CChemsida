@@ -8,7 +8,6 @@ import foretag from "../assets/homePageF.jpeg";
 import kundIFokus from "../assets/kund_i_fokus.jpeg";
 import kvalitetMiljo from "../assets/miljö_&_hållbarhet.jpeg";
 import offertImg from "../assets/offertImg.jpeg";
-import overlayimgF from "../assets/homepageFöretag.png";
 
 const Business = () => {
   return (
@@ -17,9 +16,6 @@ const Business = () => {
         <Navbar />
         <div className="businessImgContainer">
             <img className="businessImg" src={foretag} alt="Business" />
-            <div className="overLayF">
-              <img className="overLayFImg" src={overlayimgF} alt="Overlay img Business" />
-            </div>
         </div>
         <div className="text">
           <span className="textTitle">

@@ -3,6 +3,7 @@
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .titleAbout {
@@ -30,7 +31,7 @@
   flex-direction: column;
   justify-content: space-around;
   padding: 20px;
-  width: 85%;
+  width: 75%;
   margin-bottom: 20px;
 }
 
@@ -38,7 +39,7 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  width: 85%;
+  width: 75%;
   gap: 20px;
 }
 
@@ -81,6 +82,7 @@
   font-family: "merriweather", sans-serif;
   color: #999a9a;
   letter-spacing: 2px;
+  
 }
 
 .linkStyleAbout {
@@ -91,50 +93,17 @@
   font-family: "dosis", sans-serif;
 }
 
-/* Media queries för iPads och iPhones */
-@media only screen and (max-width: 1024px) {
-  .titleAbout {
-    font-size: 40px;
-    margin: 0 25px 25px 25px;
-  }
-
-  .subtitleAbout {
-    font-size: 20px;
-    max-width: 85%;
-    margin-bottom: 25px;
-  }
-
-  .spanContainerAbout {
-    padding: 10px;
-    width: 85%;
-    margin-bottom: 10px;
+@media screen and (max-width: 1400px) {
+  .bodyAbout {
+    display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-  }
-
-  .cardContainerAbout {
-    width: 85%;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 
-  .cardAbout {
-    width: 85%;
-    margin-bottom: 100px;
-  }
-
-  .cardAbout1 {
-    width: 85%;
-    margin-bottom: 100px;
-    margin-top: 150px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
   .titleAbout {
     font-size: 32px;
-    margin: 0 25px 25px 25px;
+    margin: 25px 0px 25px 0px;
   }
 
   .subtitleAbout {
@@ -145,12 +114,16 @@
 
   .spanContainerAbout {
     padding: 8px;
-    width: 85%;
+    width: 75%;
     margin-bottom: 5px;
   }
 
   .cardContainerAbout {
-    width: 85%;
+    width: 75%;
+    display: flex;
+    flex-direction: column; 
+    align-items: baseline;
+    gap: 0px;
   }
 
   .cardAbout {
@@ -161,48 +134,6 @@
   .cardAbout1 {
     width: 85%;
     margin-bottom: 50px;
-    margin-top: 150px;
   }
 }
 
-@media only screen and (max-width: 576px) {
-  .titleAbout {
-    font-size: 28px;
-    margin: 25px 25px 25px 0px;
-  }
-
-  .subtitleAbout {
-    font-size: 20px;
-    max-width: 85%;
-    margin-bottom: 25px;
-  }
-
-  .spanContainerAbout {
-    padding: 5px;
-    width: 100%;
-    margin-bottom: 0;
-  }
-
-  .cardContainerAbout {
-    width: 100%;
-  }
-
-  .cardTitleAbout1 {
-    font-size: 25px;
-    font-family: "dosis", sans-serif;
-    color: #002554;
-    margin-left: 30px;
-  }
-
-  .cardAbout {
-    width: 85%;
-    margin-bottom: 25px;
-  }
-
-  .cardAbout1 {
-    width: 100%;
-    margin-bottom: 25px;
-    margin-top: 150px;
-    margin-bottom: 150px;
-  }
-}

@@ -1,114 +1,119 @@
 /* navbar.css */
 
 .logo {
-  width: 120px;
-  margin-bottom: 25px;
-}
-
-.logoContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px; /* Add margin to create space between logo and burger menu */
-}
-
-.navBody {
-  display: flex;
-  flex-direction: column;
-  width: 85%;
-}
-
-/* .navLinkContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-} */
-
-.navcontainer {
-  display: flex;
-  flex-direction: column; /* Stack logo and navigation elements vertically */
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-  margin: auto; /* Center the navcontainer horizontally */
-}
-
-.navbarElements {
-  display: flex;
-  align-items: center;
-  width: 100%; /* Make burger menu and logo occupy full width */
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 89%;
-}
-
-.linkStyle {
-  margin-bottom: 20px;
-}
-
-.burgerMenu {
-  display: none; /* Hide burger menu icon by default */
-}
-
-@media screen and (max-width: 1400px) {
-  .burgerMenu {
-    display: block;
+    width: 120px;
+    margin-bottom: 25px;
   }
-
+  
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px; /* Add margin to create space between logo and burger menu */
+  }
+  
   .navBody {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-
-  .navcontainer {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-  }
-
-  .nav {
-    display: none;
     flex-direction: column;
-    justify-content: center;
+    width: 85%;
     align-items: center;
-    background-color: white;
-    position: absolute;
-    width: 200px;
-    height: 20vh;
-    padding: 20px;
   }
-
+  
   /* .navLinkContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 0;
+    width: 100%;
   } */
-
-  .nav.open {
+  
+  .navcontainer {
+    display: flex;
+    flex-direction: column; /* Stack logo and navigation elements vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    margin: auto; /* Center the navcontainer horizontally */
+  }
+  
+  .navbarElements {
     display: flex;
     align-items: center;
-    justify-content: start;
+    width: 100%; /* Make burger menu and logo occupy full width */
   }
-
-  .burgerMenu {
-    width: 50%; /* Adjust width as needed */
-    text-align: center; /* Center the burger menu icon */
-  }
-  .navbarElements {
-    display: block;
+  
+  .nav {
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 40px;
+    width: 89%;
   }
-}
+  
+  .linkStyle {
+    margin-bottom: 20px;
+  }
+  
+  .burgerMenu {
+    display: none; /* Hide burger menu icon by default */
+  }
+  
+  @media screen and (max-width: 1400px) {
+    .burgerMenu {
+      display: block;
+    }
+  
+    .navBody {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 75%;
+    }
+  
+    .navcontainer {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+    }
+  
+    .nav {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      position: absolute;
+      width: 200px;
+      height: 20vh;
+      padding: 20px;
+    }
+  
+    /* .navLinkContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 0;
+    } */
+  
+    .nav.open {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      position: absolute;
+      left: 75%; /* Position from the left edge of the screen */
+      transform: translateX(-50%);
+      z-index: 1000;
+    }
+  
+    .burgerMenu {
+      width: 50%; /* Adjust width as needed */
+      text-align: center; /* Center the burger menu icon */
+    }
+    .navbarElements {
+      display: block;
+      align-items: center;
+      justify-content: space-between;
+      width: 40px;
+    }
+  }
