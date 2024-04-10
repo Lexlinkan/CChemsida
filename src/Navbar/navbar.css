@@ -101,7 +101,8 @@
       align-items: center;
       justify-content: flex-end;
       position: absolute;
-      left: 75%; /* Position from the left edge of the screen */
+      left: 75%; 
+      top: 25%;
       transform: translateX(-50%);
       z-index: 1000;
     }
@@ -115,5 +116,8 @@
       align-items: center;
       justify-content: space-between;
       width: 40px;
+    }
+    .burgerMenu.hidden {
+      display: none;
     }
   }

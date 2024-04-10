@@ -1,10 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
-import './LedigaJobb.css';
+import './ledigaJobb.css';
 
 // Bilder
-import logoHome from "../assets/CCS_COLOR.png";
 import ledigaJobbImg from "../assets/lediga-jobb.jpg";
 
 

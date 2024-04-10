@@ -27,95 +27,105 @@ const Navbar = () => {
 
   return (
     <div className="navBody">
-        <div className="logoContainer">
-          <Link to="/">
-            <img className="logo" src={logoHome} alt="Logga" />
-          </Link>
-        </div>
-        {isMobile ? (
-          <div className="navbarElements">
-            <div className={`nav ${open ? "open" : ""}`}>
-              <Link
-                className="linkStyle"
-                to="/tjanster"
-                onClick={() => setOpen(false)}
-              >
-                <span className="navItem">VÅRA TJÄNSTER</span>
-              </Link>
-              <Link
-                className="linkStyle"
-                to="/markservice"
-                onClick={() => setOpen(false)}
-              >
-                <span className="navItem">MARKSERVICE</span>
-              </Link>
-              <Link
-                className="linkStyle"
-                to="/referenser"
-                onClick={() => setOpen(false)}
-              >
-                <span className="navItem">REFERENSER</span>
-              </Link>
-              <Link
-                className="linkStyle"
-                to="/kvalitetmiljo"
-                onClick={() => setOpen(false)}
-              >
-                <span className="navItem">KVALITET & MILJÖ</span>
-              </Link>
-              <Link
-                className="linkStyle"
-                to="/offert"
-                onClick={() => setOpen(false)}
-              >
-                <span className="navItem">BEGÄR OFFERT</span>
-              </Link>
-              <Link
-                className="linkStyle"
-                to="/about"
-                onClick={() => setOpen(false)}
-              >
-                <span className="navItem">OM OSS</span>
-              </Link>
-              <Link
-                className="linkStyle"
-                to="/kontakt"
-                onClick={() => setOpen(false)}
-              >
-                <span className="navItem">KONTAKT</span>
-              </Link>
-            </div>
-            <MenuIcon
-              style={{ fontSize: "50" }}
-              className="burgerMenu"
-              onClick={toggleMenu}
-            />
-          </div>
-        ) : (
-          <div className="nav">
-            <Link className="linkStyle" to="/tjanster">
+      <div className="logoContainer">
+        <Link to="/">
+          <img className="logo" src={logoHome} alt="Logga" />
+        </Link>
+      </div>
+      {isMobile ? (
+        <div className="navbarElements">
+          <div className={`nav ${open ? "open" : ""}`}>
+            <Link
+              className="linkStyle"
+              to="/tjanster"
+              onClick={() => setOpen(false)}
+            >
               <span className="navItem">VÅRA TJÄNSTER</span>
             </Link>
-            <Link className="linkStyle" to="/markservice">
+            <Link
+              className="linkStyle"
+              to="/markservice"
+              onClick={() => setOpen(false)}
+            >
               <span className="navItem">MARKSERVICE</span>
             </Link>
-            <Link className="linkStyle" to="/referenser">
+            <Link
+              className="linkStyle"
+              to="/referenser"
+              onClick={() => setOpen(false)}
+            >
               <span className="navItem">REFERENSER</span>
             </Link>
-            <Link className="linkStyle" to="/kvalitetmiljo">
+            <Link
+              className="linkStyle"
+              to="/kvalitetmiljo"
+              onClick={() => setOpen(false)}
+            >
               <span className="navItem">KVALITET & MILJÖ</span>
             </Link>
-            <Link className="linkStyle" to="/offert">
+            <Link
+              className="linkStyle"
+              to="/offert"
+              onClick={() => setOpen(false)}
+            >
               <span className="navItem">BEGÄR OFFERT</span>
             </Link>
-            <Link className="linkStyle" to="/about">
+            <Link
+              className="linkStyle"
+              to="/ledigajobb"
+              onClick={() => setOpen(false)}
+            >
+              <span className="navItem">LEDIGA JOBB</span>
+            </Link>
+            <Link
+              className="linkStyle"
+              to="/about"
+              onClick={() => setOpen(false)}
+            >
               <span className="navItem">OM OSS</span>
             </Link>
-            <Link className="linkStyle" to="/kontakt">
+            <Link
+              className="linkStyle"
+              to="/kontakt"
+              onClick={() => setOpen(false)}
+            >
               <span className="navItem">KONTAKT</span>
             </Link>
           </div>
-        )}
+          <MenuIcon
+            style={{ fontSize: "50" }}
+            className={`burgerMenu ${open ? "hidden" : ""}`}
+            onClick={toggleMenu}
+          />
+        </div>
+      ) : (
+        <div className="nav">
+          <Link className="linkStyle" to="/tjanster">
+            <span className="navItem">VÅRA TJÄNSTER</span>
+          </Link>
+          <Link className="linkStyle" to="/markservice">
+            <span className="navItem">MARKSERVICE</span>
+          </Link>
+          <Link className="linkStyle" to="/referenser">
+            <span className="navItem">REFERENSER</span>
+          </Link>
+          <Link className="linkStyle" to="/kvalitetmiljo">
+            <span className="navItem">KVALITET & MILJÖ</span>
+          </Link>
+          {/* <Link className="linkStyle" to="/offert">
+            <span className="navItem">BEGÄR OFFERT</span>
+          </Link> */}
+          <Link className="linkStyle" to="/ledigajobb">
+            <span className="navItem">LEDIGA JOBB</span>
+          </Link>
+          <Link className="linkStyle" to="/about">
+            <span className="navItem">OM OSS</span>
+          </Link>
+          <Link className="linkStyle" to="/kontakt">
+            <span className="navItem">KONTAKT</span>
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

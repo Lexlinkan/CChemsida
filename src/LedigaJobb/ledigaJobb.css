@@ -93,51 +93,48 @@
   font-family: dosis, sans-serif;
 }
 
-@media only screen and (max-width: 820px) {
-  .bodyLJ {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .cardContainerLJ {
-    display: none;
-  }
-  .titleLJ {
-    font-size: 30px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  .cardSubtitleLJ p {
-    margin-bottom: 300px;
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
+@media screen and (max-width: 1400px) {
   .bodyLJ {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: fit-content;
+
   }
   .cardContainerLJ {
     width: 75%;
-    align-items: center;
+    align-items: baseline;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: fit-content;
+
   }
   .titleLJ {
     font-size: 30px;
     margin-top: 20px;
     margin-bottom: 20px;
+    height: fit-content;
+
   }
-  .cardSubtitleLJ p {
-    margin-bottom: 300px;
-    justify-content: center;
+  .cardLJ {
     display: flex;
     flex-direction: column;
+    width: 90%;
+    justify-content: center;
     align-items: center;
-    overflow: scroll;
-}
+    margin-bottom: 10px;
+    height: fit-content;
+
+  }
+  .cardSubtitleLJ {
+    font-size: 15px;
+    font-family: merriweather, sans-serif;
+    color: #999a9a;
+    letter-spacing: 2px;
+    height: fit-content;
+
+  }
+
 }

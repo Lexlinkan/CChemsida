@@ -129,11 +129,12 @@
   .cardAbout {
     width: 85%;
     margin-bottom: 50px;
+    height: fit-content;
   }
 
   .cardAbout1 {
     width: 85%;
     margin-bottom: 50px;
+    height: fit-content;
   }
 }
-

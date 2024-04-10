@@ -31,14 +31,15 @@
       display: none;
     }
     .style {
-      margin-top: 20px;
       flex-wrap: wrap;
       display: flex;
       align-items: center;
       justify-content: space-around;
       gap: 5px;
+      margin-top: auto;
     }
     .span1 {
       display: none;
     }
 }
+
