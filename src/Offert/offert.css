@@ -1,4 +1,4 @@
-/* .bodyOffert {
+.bodyOffert {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -147,4 +147,4 @@
     padding: 0px;
     margin-bottom: 0px;
   }
-} */
+}

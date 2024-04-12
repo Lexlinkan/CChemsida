@@ -10,7 +10,6 @@ import Referenser from './Referenser/Referenser';
 import KvalitetMiljo from './Kvalitet&Miljö/KvalitetMiljo';
 import LedigaJobb from './LedigaJobb/LedigaJobb';
 import About from './About/About';
-import { Offert } from "src/Offert/Offert.jsx";
 // import Privat from './Privat';
 // import Intresseanmälan from './Intresseanmälan';
 // import PrisLista from './PrisLista';
