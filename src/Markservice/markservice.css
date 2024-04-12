@@ -123,6 +123,12 @@
     width: 90%;
 
   }
+  .markImage {
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
   .cardSubtitleMark {
     width: 90%;
   }

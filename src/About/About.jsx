@@ -9,7 +9,7 @@ const About = () => {
   return (
     <div className="bodyAbout">
       <Navbar />
-      <img src={omOss} style={{ width: "75%" }} alt="Våra Tjänster image" />
+      <img className="aboutimage" src={omOss} alt="Våra Tjänster image" />
       <div className="spanContainerAbout">
         <span className="titleAbout">Ett städbolag att lita på</span>
         <span className="subtitleAbout">

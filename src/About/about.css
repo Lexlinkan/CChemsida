@@ -92,6 +92,9 @@
   font-weight: 500;
   font-family: "dosis", sans-serif;
 }
+.aboutimage {
+  width: 75%;
+}
 
 @media screen and (max-width: 1400px) {
   .bodyAbout {
@@ -99,6 +102,11 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+
+  }
+
+  .aboutimage {
+    width: 85%;
   }
 
   .titleAbout {
@@ -114,7 +122,7 @@
 
   .spanContainerAbout {
     padding: 8px;
-    width: 75%;
+    width: 85%;
     margin-bottom: 5px;
   }
 

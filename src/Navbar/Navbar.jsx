@@ -63,13 +63,13 @@ const Navbar = () => {
             >
               <span className="navItem">KVALITET & MILJÖ</span>
             </Link>
-            <Link
+            {/* <Link
               className="linkStyle"
               to="/offert"
               onClick={() => setOpen(false)}
             >
               <span className="navItem">BEGÄR OFFERT</span>
-            </Link>
+            </Link> */}
             <Link
               className="linkStyle"
               to="/ledigajobb"
