@@ -55,12 +55,14 @@
   font-family: dosis, sans-serif;
   color: #002554;
   margin-bottom: 20px;
+  height: fit-content;
 }
 .cardTitleLJ1 {
   font-size: 25px;
   font-family: dosis, sans-serif;
   color: #002554;
   margin-bottom: 20px;
+  height: fit-content;
 }
 
 .cardSubtitleLJ {
