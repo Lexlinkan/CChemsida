@@ -10,7 +10,7 @@ import Referenser from './Referenser/Referenser';
 import KvalitetMiljo from './Kvalitet&Miljö/KvalitetMiljo';
 import LedigaJobb from './LedigaJobb/LedigaJobb';
 import About from './About/About';
-// import Offert from "src/Offert/Offert.jsx";
+import Offert from "./Offert/Offert";
 // import Privat from './Privat';
 // import Intresseanmälan from './Intresseanmälan';
 // import PrisLista from './PrisLista';
@@ -26,7 +26,7 @@ function App() {
         {/* <Route path="/privat" element={<Privat />} /> */}
         <Route path="/tjanster" element={<Tjanster />} />
         <Route path="/kontakt" element={<Kontakt />} />
-        {/* <Route path="/offert" element={<Offert />} /> */}
+        <Route path="/offert" element={<Offert />} />
         <Route path="/markservice" element={<Markservice />} />
         <Route path="/referenser" element={<Referenser />} />
         <Route path="/kvalitetmiljo" element={<KvalitetMiljo />} />

@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import "./offert.css";
 import Navbar from "../Navbar/Navbar";
-
 // Bilder
 import offertImg from "../assets/offert.jpeg";
 
